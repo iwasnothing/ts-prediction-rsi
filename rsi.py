@@ -5,8 +5,11 @@ from darts.models import NBEATSModel
 from darts import TimeSeries
 import numpy as np
 import pandas as pd
+from datetime import datetime,timedelta
 import ray
 ray.init()
+
+today_str = datetime.today().strftime('%Y-%m-%d')
 
 def getStock(tic,period):
     ticker = yf.Ticker(tic)
@@ -46,7 +49,7 @@ def f(stock):
 
     elif last_Rsi > 70  and u < last_Rsi :
         signal = -1
-    return {"Asset": stock, "signal": signal, "take_profit": high, "stop_loss": low}
+    return {"DATE": today_str, "Asset": stock, "signal": signal, "take_profit": high, "stop_loss": low}
 
 #list = [ "QQQ", "AAPL"]
 #my_file = open("naq100.txt", "r")
@@ -63,4 +66,4 @@ df.to_csv("today_rsi_signals.csv",index=False)
 df['Action'] = df['signal'].apply(lambda x: "BUY" if x == 1 else "SELL" if x == -1 else "NONE")
 df['Target Price'] = df['take_profit'].apply(lambda x: str(round(x, 2)) if x > 0 else "")
 df['Stop Loss'] = df['stop_loss'].apply(lambda x: str(round(x, 2)) if x > 0 else "")
-df[["Action","Asset","Target Price","Stop Loss"]].to_html('today_rsi_signals.html',index=False)
+df[["DATE","Action","Asset","Target Price","Stop Loss"]].to_html('today_rsi_signals.html',index=False)
