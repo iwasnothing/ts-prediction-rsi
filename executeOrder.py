@@ -41,7 +41,7 @@ if os.path.isfile(filename):
                     orig = book.iloc[idx,book.columns.get_loc("bought_price")].values[0]
                     sold = getAsk(s)
                     PL = sold - orig
-                    rate = str(round( (sold - orig)/orig,2)) + '%'
+                    rate = str(round( (sold - orig)*100/orig,2)) + '%'
                     book.iloc[idx,book.columns.get_loc("sold_price")] = sold
                     book.iloc[idx,book.columns.get_loc("Profit")] = PL
                     book.iloc[idx,book.columns.get_loc("Profit_Pct")] = rate

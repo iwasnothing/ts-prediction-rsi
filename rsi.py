@@ -43,7 +43,7 @@ def f(stock):
     u = pred.mean()[0]
     last_Rsi = my_data[-1,4]
     print(stock,last_Rsi,u)
-    if last_Rsi < 40 and u > last_Rsi * 1.1:
+    if last_Rsi < 30 and u > last_Rsi * 1.1:
         signal = 1
         high,low = take_profit(data, 3, lookback)
 
