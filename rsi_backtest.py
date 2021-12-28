@@ -5,6 +5,7 @@ from All_Functions_Master_File import rsi,adder
 import Primal_Functions_Performance_Evaluation
 from darts.models import NBEATSModel
 from darts import TimeSeries
+from prophet import Prophet
 import numpy as np
 import pandas as pd
 from darts.metrics import mase
@@ -89,8 +90,7 @@ def f(stock):
     profit_pct1 = Primal_Functions_Performance_Evaluation.performance(my_data_eq1, 11, my_data, stock, expected_cost, lot, investment)
     return {"asset": stock, "baseline": profit_pct0, "ML": profit_pct1, "performance": profit_pct1-profit_pct0}
 
-#list = [ "QQQ", "AAPL"]
-my_file = open("naq100.txt", "r")
+my_file = open("vgt.txt", "r")
 content = my_file.read()
 list = content.split('\n')
 print(list)
