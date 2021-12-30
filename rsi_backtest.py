@@ -9,6 +9,7 @@ from prophet import Prophet
 import numpy as np
 import pandas as pd
 from darts.metrics import mase
+from sklearn import metrics
 import ray
 ray.init()
 
@@ -52,6 +53,18 @@ def predicted_rsi_signal(Data, rsi_col, threshold,model, input_chunk_length, buy
                 Data[i, sell] = -1
     return Data
 
+def prophet_rsi_signal(Data, rsi_col, threshold,forecast, buy, sell):
+    low = threshold
+    Data[:, buy] = 0
+    Data[:, sell] = 0
+    for i in range(len(Data)):
+        #print("rsi prediction",Data[i,rsi_col],forecast[i],forecast[i+5])
+        if Data[i, rsi_col] < low and forecast[i+5] > forecast[i] and forecast[i+5] > low:
+            Data[i, buy] = 1
+        elif Data[i, rsi_col] > 70 and forecast[i + 5] < forecast[i] and forecast[i + 5] < 70:
+            Data[i, sell] = -1
+    return Data
+
 def getStockFor(tic,period):
     ticker = yf.Ticker(tic)
     df = ticker.history(period=period)
@@ -72,14 +85,15 @@ def f(stock):
     my_data = adder(data, 20)
     my_data = rsi(my_data, 14, 3, 4)
     my_data = ma(my_data, 20, 4, 5)
-    my_data[:, 5:10] = 0
-    my_data = simple_rsi_signal(my_data, 5, 30, 6, 7)
+    my_data[:, 6:10] = 0
+    test_data = my_data[-100:,:]
+    test_data = simple_rsi_signal(test_data, 5, 40, 6, 7)
     expected_cost = 0.02
     lot = 1
     investment = 100
-    my_data_ret = Primal_Functions_Performance_Evaluation.holding(my_data, 6, 7, 8, 9)
-    my_data_eq = Primal_Functions_Performance_Evaluation.equity_curve(my_data_ret, 8, expected_cost, lot, investment)
-    profit_pct0 = Primal_Functions_Performance_Evaluation.performance(my_data_eq, 8, my_data, stock, expected_cost, lot, investment)
+    test_data_ret = Primal_Functions_Performance_Evaluation.holding(test_data, 6, 7, 8, 9)
+    test_data_eq = Primal_Functions_Performance_Evaluation.equity_curve(test_data_ret, 8, expected_cost, lot, investment)
+    profit_pct0 = Primal_Functions_Performance_Evaluation.performance(test_data_eq, 8, my_data, stock, expected_cost, lot, investment)
     #series = TimeSeries.from_values(np.float32(my_data[:, 5]))
     #train, val = series[:-100], series[-100:]
     #model = NBEATSModel(input_chunk_length=lookback, output_chunk_length=future_range)
@@ -90,15 +104,17 @@ def f(stock):
     m.add_seasonality(name='half_year', period=182, fourier_order=5)
     m.add_country_holidays(country_name='US')
     m.fit(train)
-    future = m.make_future_dataframe(periods=100)
+    future = m.make_future_dataframe(periods=105)
     forecast = m.predict(future)
-    err = mase(series, pred, train)
+    #print(forecast)
+    err = metrics.mean_absolute_error(val['y'].values, forecast.iloc[-105:-5]['yhat'].values)
     print("validation mase: ",err)
     my_data[:, 9:13] = 0
-    my_data = predicted_rsi_signal(my_data, 4, 40,model, 14, 9, 10)
-    my_data_ret1 = Primal_Functions_Performance_Evaluation.holding(my_data, 9, 10, 11, 12)
-    my_data_eq1 = Primal_Functions_Performance_Evaluation.equity_curve(my_data_ret1, 11, expected_cost, lot, investment)
-    profit_pct1 = Primal_Functions_Performance_Evaluation.performance(my_data_eq1, 11, my_data, stock, expected_cost, lot, investment)
+    test_data1 = my_data[-100:,:]
+    test_data1 = prophet_rsi_signal(test_data1, 4, 40,forecast.iloc[-105:]['yhat'].values, 9, 10)
+    test_data_ret1 = Primal_Functions_Performance_Evaluation.holding(test_data1, 9, 10, 11, 12)
+    test_data_eq1 = Primal_Functions_Performance_Evaluation.equity_curve(test_data_ret1, 11, expected_cost, lot, investment)
+    profit_pct1 = Primal_Functions_Performance_Evaluation.performance(test_data_eq1, 11, my_data, stock, expected_cost, lot, investment)
     return {"asset": stock, "baseline": profit_pct0, "ML": profit_pct1, "performance": profit_pct1-profit_pct0}
 
 my_file = open("vgt.txt", "r")
