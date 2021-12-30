@@ -1,7 +1,7 @@
 # First, run `pip install ray`.
 import yfinance as yf
 from darts.metrics import mase
-from All_Functions_Master_File import rsi,adder
+from All_Functions_Master_File import rsi,adder,ma
 import Primal_Functions_Performance_Evaluation
 from darts.models import NBEATSModel
 from darts import TimeSeries
@@ -52,35 +52,46 @@ def predicted_rsi_signal(Data, rsi_col, threshold,model, input_chunk_length, buy
                 Data[i, sell] = -1
     return Data
 
-def getStock(tic,period):
+def getStockFor(tic,period):
     ticker = yf.Ticker(tic)
     df = ticker.history(period=period)
     return df.values[:,:4],df.index
-
+def getStock(tic,start_period):
+    ticker = yf.Ticker(tic)
+    df = ticker.history(start=start_period)
+    return df.values[:,:4],df.index
 
 
 @ray.remote
 def f(stock):
     lookback = 14
     future_range = 5
-    data, ts = getStock(stock, '1y')
+    data, ts = getStock(stock, '2017-12-01')
     if len(data) < 100:
         return {"asset": stock, "baseline": 0, "ML": 0, "performance": 0}
     my_data = adder(data, 20)
     my_data = rsi(my_data, 14, 3, 4)
+    my_data = ma(my_data, 20, 4, 5)
     my_data[:, 5:10] = 0
-    my_data = simple_rsi_signal(my_data, 4, 30, 5, 6)
+    my_data = simple_rsi_signal(my_data, 5, 30, 6, 7)
     expected_cost = 0.02
     lot = 1
     investment = 100
-    my_data_ret = Primal_Functions_Performance_Evaluation.holding(my_data, 5, 6, 7, 8)
-    my_data_eq = Primal_Functions_Performance_Evaluation.equity_curve(my_data_ret, 7, expected_cost, lot, investment)
-    profit_pct0 = Primal_Functions_Performance_Evaluation.performance(my_data_eq, 7, my_data, stock, expected_cost, lot, investment)
-    series = TimeSeries.from_values(np.float32(my_data[:, 4]))
-    train, val = series[:100], series[100:]
-    model = NBEATSModel(input_chunk_length=lookback, output_chunk_length=future_range)
-    model.fit(train)
-    pred = model.predict(n=len(val), series=train)
+    my_data_ret = Primal_Functions_Performance_Evaluation.holding(my_data, 6, 7, 8, 9)
+    my_data_eq = Primal_Functions_Performance_Evaluation.equity_curve(my_data_ret, 8, expected_cost, lot, investment)
+    profit_pct0 = Primal_Functions_Performance_Evaluation.performance(my_data_eq, 8, my_data, stock, expected_cost, lot, investment)
+    #series = TimeSeries.from_values(np.float32(my_data[:, 5]))
+    #train, val = series[:-100], series[-100:]
+    #model = NBEATSModel(input_chunk_length=lookback, output_chunk_length=future_range)
+    ts = ts[-1 * len(my_data):]
+    df = pd.DataFrame({'y': my_data[:, 5], 'ds': ts})
+    train, val = df.iloc[:-100], df.iloc[-100:]
+    m = Prophet(yearly_seasonality=True)
+    m.add_seasonality(name='half_year', period=182, fourier_order=5)
+    m.add_country_holidays(country_name='US')
+    m.fit(train)
+    future = m.make_future_dataframe(periods=100)
+    forecast = m.predict(future)
     err = mase(series, pred, train)
     print("validation mase: ",err)
     my_data[:, 9:13] = 0
