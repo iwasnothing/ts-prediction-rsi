@@ -117,7 +117,7 @@ def f(stock):
     profit_pct1 = Primal_Functions_Performance_Evaluation.performance(test_data_eq1, 11, my_data, stock, expected_cost, lot, investment)
     return {"asset": stock, "baseline": profit_pct0, "ML": profit_pct1, "performance": profit_pct1-profit_pct0}
 
-my_file = open("vgt.txt", "r")
+my_file = open("naq100.txt", "r")
 content = my_file.read()
 list = content.split('\n')
 print(list)
