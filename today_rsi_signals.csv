@@ -1,1 +1,6 @@
 DATE,Asset,signal,take_profit,stop_loss
+2022-01-01,EXC,-1,0,0
+2022-01-01,CERN,-1,0,0
+2022-01-01,MNST,-1,0,0
+2022-01-01,WBA,-1,0,0
+2022-01-01,VGT,0,0,0
