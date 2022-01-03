@@ -1,0 +1,7 @@
+*sh
+*stdout
+*stderr
+source_env.sh
+.idea/
+.ipynb_checkpoints/
+__pycache__/
