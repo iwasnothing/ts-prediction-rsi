@@ -43,11 +43,11 @@ def f(stock):
     u = pred.mean()[0]
     last_Rsi = my_data[-1,4]
     print(stock,last_Rsi,u)
-    if last_Rsi < 30 and u > last_Rsi * 1.1:
+    if last_Rsi < 35 and u > last_Rsi * 1.1:
         signal = 1
         high,low = take_profit(data, 3, lookback)
 
-    elif last_Rsi > 70  and u < last_Rsi :
+    elif last_Rsi > 65  and u < last_Rsi :
         signal = -1
     return {"DATE": today_str, "Asset": stock, "signal": signal, "take_profit": high, "stop_loss": low}
 

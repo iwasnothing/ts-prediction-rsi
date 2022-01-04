@@ -117,10 +117,10 @@ def f(stock):
     pred = forecast.iloc[-1*pred_period:]['yhat'].values
     last_Rsi = my_data[-1,4]
     print("prediction",stock,last_Rsi,pred)
-    if last_Rsi < 30 and pred[-1] > last_Rsi  and pred[-1] > pred[0]:
+    if last_Rsi < 35 and pred[-1] > last_Rsi  and pred[-1] > pred[0]:
         signal = 1
         high,low = take_profit(data, 3, lookback)
-    elif last_Rsi > 70  and pred[-1] < last_Rsi and pred[-1] < pred[0]:
+    elif last_Rsi > 65  and pred[-1] < last_Rsi and pred[-1] < pred[0]:
         signal = -1
     execOrder(stock,signal)
     return {"DATE": today_str, "Asset": stock, "signal": signal, "take_profit": high, "stop_loss": low}
