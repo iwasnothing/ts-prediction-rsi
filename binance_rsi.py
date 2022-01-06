@@ -63,14 +63,14 @@ def execOrder(tic,signal):
     if signal == 1:
         fee_pct = float(fee[0]['makerCommission'])
         qty = 100.0 * (1 - fee_pct) / price
-        print("exec order at : ", price, qty, fee_pct, price * qty)
+        print("exec buy order at : ", price, round(qty,5), fee_pct, price * qty)
         if float(balance_usdt['free']) >= 100:
             order = client.create_order(
             symbol=tic,
             side=SIDE_BUY,
             type=ORDER_TYPE_LIMIT,
             timeInForce=TIME_IN_FORCE_GTC,
-            quantity=Decimal(qty),
+            quantity=round(qty,5),
             price=str(price) )
             print(order)
     elif signal == -1:
@@ -78,13 +78,13 @@ def execOrder(tic,signal):
         btcbal = float(balance_usdt['free'])
         if btcbal > 0:
             qty = btcbal*(1-fee_pct)
-            print("exec order at : ",price,qty,fee_pct,price*qty)
+            print("exec sell order at : ",price,round(qty,5),fee_pct,price*qty)
             order = client.create_order(
             symbol=tic,
             side=SIDE_SELL,
             type=ORDER_TYPE_LIMIT,
             timeInForce=TIME_IN_FORCE_GTC,
-            quantity=Decimal(qty),
+            quantity=round(qty,5),
             price=str(price))
             print(order)
 
