@@ -47,7 +47,7 @@ def predicted_rsi_signal(Data, rsi_col, threshold,model, input_chunk_length, buy
             if u > Data[i, rsi_col] * 1.1:
                 Data[i, buy] = 1
 
-        elif Data[i, rsi_col] > 70 and i > input_chunk_length:
+        elif Data[i, rsi_col] > 60 and i > input_chunk_length:
             u = OnePrediction(Data[i-input_chunk_length:i+1, rsi_col] , model, 5)
             if u < Data[i, rsi_col]:
                 Data[i, sell] = -1
@@ -61,7 +61,7 @@ def prophet_rsi_signal(Data, rsi_col, threshold,forecast, buy, sell):
         #print("rsi prediction",Data[i,rsi_col],forecast[i],forecast[i+5])
         if Data[i, rsi_col] < low and forecast[i+5] > forecast[i] and forecast[i+5] > low:
             Data[i, buy] = 1
-        elif Data[i, rsi_col] > 70 and forecast[i + 5] < forecast[i] and forecast[i + 5] < 70:
+        elif Data[i, rsi_col] > 65 and forecast[i + 5] < forecast[i] and forecast[i + 5] < 65:
             Data[i, sell] = -1
     return Data
 
@@ -111,13 +111,13 @@ def f(stock):
     print("validation mase: ",err)
     my_data[:, 9:13] = 0
     test_data1 = my_data[-100:,:]
-    test_data1 = prophet_rsi_signal(test_data1, 4, 40,forecast.iloc[-105:]['yhat'].values, 9, 10)
+    test_data1 = prophet_rsi_signal(test_data1, 4, 35,forecast.iloc[-105:]['yhat'].values, 9, 10)
     test_data_ret1 = Primal_Functions_Performance_Evaluation.holding(test_data1, 9, 10, 11, 12)
     test_data_eq1 = Primal_Functions_Performance_Evaluation.equity_curve(test_data_ret1, 11, expected_cost, lot, investment)
     profit_pct1 = Primal_Functions_Performance_Evaluation.performance(test_data_eq1, 11, my_data, stock, expected_cost, lot, investment)
     return {"asset": stock, "baseline": profit_pct0, "ML": profit_pct1, "performance": profit_pct1-profit_pct0}
 
-my_file = open("naq100.txt", "r")
+my_file = open("vgt.txt", "r")
 content = my_file.read()
 list = content.split('\n')
 print(list)
