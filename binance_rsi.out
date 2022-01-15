@@ -520,3 +520,42 @@ To github.com:iwasnothing/ts-prediction-rsi.git
  1 file changed, 40 insertions(+)
 To github.com:iwasnothing/ts-prediction-rsi.git
    174b310..7820ef3  main -> main
+[2m[36m(pid=30897)[0m /Users/kahingleung/PycharmProjects/timeseries/All_Functions_Master_File.py:168: RuntimeWarning: Mean of empty slice.
+[2m[36m(pid=30897)[0m   Data[i, where] = (Data[i - lookback + 1:i + 1, close].mean())
+[2m[36m(pid=30897)[0m /Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/numpy/core/_methods.py:189: RuntimeWarning: invalid value encountered in double_scalars
+[2m[36m(pid=30897)[0m   ret = ret.dtype.type(ret / rcount)
+['BTCUSDT']
+[2m[36m(f pid=30897)[0m Initial log joint probability = -29.6904
+[2m[36m(f pid=30897)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=30897)[0m       99       2332.31     0.0177022       255.345           1           1      125   
+[2m[36m(f pid=30897)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=30897)[0m      199       2346.67   0.000906781       72.2141      0.5039      0.5039      248   
+[2m[36m(f pid=30897)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=30897)[0m      299       2356.85     0.0363083       419.014           1           1      363   
+[2m[36m(f pid=30897)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=30897)[0m      399       2375.39    0.00753645       177.622      0.7943      0.7943      487   
+[2m[36m(f pid=30897)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=30897)[0m      499       2379.01   0.000214021        88.007           1           1      611   
+[2m[36m(f pid=30897)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=30897)[0m      599       2380.38     0.0236025       130.191           1           1      728   
+[2m[36m(f pid=30897)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=30897)[0m      699       2381.45    0.00238279       81.1164           1           1      847   
+[2m[36m(f pid=30897)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=30897)[0m      748       2381.68   0.000207867       74.3892   2.721e-06       0.001      940  LS failed, Hessian reset 
+[2m[36m(f pid=30897)[0m      799       2382.33    0.00131604       78.9823           1           1      996   
+[2m[36m(f pid=30897)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=30897)[0m      899       2382.38   0.000333224       103.852           1           1     1121   
+[2m[36m(f pid=30897)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=30897)[0m      999       2382.42   5.10678e-07       67.2314      0.4966      0.4966     1247   
+[2m[36m(f pid=30897)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=30897)[0m     1003       2382.42   1.66029e-07       68.3542      0.2405           1     1253   
+[2m[36m(f pid=30897)[0m Optimization terminated normally: 
+[2m[36m(f pid=30897)[0m   Convergence detected: relative gradient magnitude is below tolerance
+[2m[36m(f pid=30897)[0m prediction BTCUSDT 39.66192517331549 [48.36789985 50.45462151 47.49117538 47.07002807 46.61070755]
+[2m[36m(f pid=30897)[0m btc balance:  4.966e-05
+[2m[36m(f pid=30897)[0m usdt balance:  125.76838291
+         DATE    Asset  signal  take_profit  stop_loss
+0  2022-01-15  BTCUSDT       0            0          0
+[2m[36m(f pid=30897)[0m 43103.31 0.001
+[2m[36m(f pid=30897)[0m [{'symbol': 'BTCUSDT', 'makerCommission': '0.001', 'takerCommission': '0.001'}]
+/Users/kahingleung/PycharmProjects/timeseries
