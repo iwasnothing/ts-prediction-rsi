@@ -716,3 +716,40 @@ To github.com:iwasnothing/ts-prediction-rsi.git
  1 file changed, 32 insertions(+)
 To github.com:iwasnothing/ts-prediction-rsi.git
    19a5a01..52bb0e9  main -> main
+[2m[36m(pid=10059)[0m /Users/kahingleung/PycharmProjects/timeseries/All_Functions_Master_File.py:168: RuntimeWarning: Mean of empty slice.
+[2m[36m(pid=10059)[0m   Data[i, where] = (Data[i - lookback + 1:i + 1, close].mean())
+[2m[36m(pid=10059)[0m /Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/numpy/core/_methods.py:189: RuntimeWarning: invalid value encountered in double_scalars
+[2m[36m(pid=10059)[0m   ret = ret.dtype.type(ret / rcount)
+['BTCUSDT']
+[2m[36m(f pid=10059)[0m Initial log joint probability = -31.3361
+[2m[36m(f pid=10059)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=10059)[0m       99       2339.51      0.083885       267.604           1           1      127   
+[2m[36m(f pid=10059)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=10059)[0m      199       2357.37    0.00299566       213.228           1           1      259   
+[2m[36m(f pid=10059)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=10059)[0m      299       2366.48   0.000820114       77.6669           1           1      390   
+[2m[36m(f pid=10059)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=10059)[0m      399       2378.72     0.0080853       190.776           1           1      505   
+[2m[36m(f pid=10059)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=10059)[0m      496       2386.56    0.00026811       73.8635   1.008e-06       0.001      646  LS failed, Hessian reset 
+[2m[36m(f pid=10059)[0m      499       2386.71   0.000372503       111.751      0.2321      0.2321      651   
+[2m[36m(f pid=10059)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=10059)[0m      599        2388.2    0.00139354       80.3704      0.9659      0.9659      776   
+[2m[36m(f pid=10059)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=10059)[0m      699       2389.01   0.000503511        90.636      0.4114           1      900   
+[2m[36m(f pid=10059)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=10059)[0m      729       2389.42   0.000317213       98.8358   3.917e-06       0.001      970  LS failed, Hessian reset 
+[2m[36m(f pid=10059)[0m      799       2389.76   4.72792e-06       79.0385      0.8879      0.8879     1054   
+[2m[36m(f pid=10059)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=10059)[0m      806       2389.77   5.82363e-05       77.7087   6.333e-07       0.001     1098  LS failed, Hessian reset 
+[2m[36m(f pid=10059)[0m      837       2389.78   5.08484e-08       65.9722      0.2753           1     1139   
+[2m[36m(f pid=10059)[0m Optimization terminated normally: 
+[2m[36m(f pid=10059)[0m   Convergence detected: relative gradient magnitude is below tolerance
+[2m[36m(f pid=10059)[0m prediction BTCUSDT 35.430801401252396 [44.18577887 43.83575591 43.52866344 43.49952894 43.36200271]
+[2m[36m(f pid=10059)[0m btc balance:  4.966e-05
+[2m[36m(f pid=10059)[0m usdt balance:  125.76838291
+         DATE    Asset  signal  take_profit  stop_loss
+0  2022-01-20  BTCUSDT       0            0          0
+[2m[36m(f pid=10059)[0m 41721.34 0.001
+[2m[36m(f pid=10059)[0m [{'symbol': 'BTCUSDT', 'makerCommission': '0.001', 'takerCommission': '0.001'}]
+/Users/kahingleung/PycharmProjects/timeseries
