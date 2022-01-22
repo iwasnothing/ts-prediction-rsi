@@ -794,3 +794,42 @@ To github.com:iwasnothing/ts-prediction-rsi.git
  1 file changed, 33 insertions(+)
 To github.com:iwasnothing/ts-prediction-rsi.git
    1aa1b2e..8f4d6ee  main -> main
+[2m[36m(pid=15425)[0m /Users/kahingleung/PycharmProjects/timeseries/All_Functions_Master_File.py:168: RuntimeWarning: Mean of empty slice.
+[2m[36m(pid=15425)[0m   Data[i, where] = (Data[i - lookback + 1:i + 1, close].mean())
+[2m[36m(pid=15425)[0m /Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/numpy/core/_methods.py:189: RuntimeWarning: invalid value encountered in double_scalars
+[2m[36m(pid=15425)[0m   ret = ret.dtype.type(ret / rcount)
+['BTCUSDT']
+[2m[36m(f pid=15425)[0m Initial log joint probability = -34.7482
+[2m[36m(f pid=15425)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=15425)[0m       99       2343.35     0.0326153       313.308           1           1      128   
+[2m[36m(f pid=15425)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=15425)[0m      199       2358.63    0.00102077       59.7279       1.202      0.2974      256   
+[2m[36m(f pid=15425)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=15425)[0m      279       2368.65   0.000328087       141.771   2.075e-06       0.001      384  LS failed, Hessian reset 
+[2m[36m(f pid=15425)[0m      299       2369.06   0.000629604       85.1315      0.8394      0.8394      405   
+[2m[36m(f pid=15425)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=15425)[0m      399        2378.4    0.00319834       117.163      0.1314           1      521   
+[2m[36m(f pid=15425)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=15425)[0m      499       2383.82    0.00462803       97.7324           1           1      642   
+[2m[36m(f pid=15425)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=15425)[0m      505       2383.93   0.000500135        114.88   6.621e-06       0.001      684  LS failed, Hessian reset 
+[2m[36m(f pid=15425)[0m      599       2384.83   0.000285897       64.6421        0.67        0.67      795   
+[2m[36m(f pid=15425)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=15425)[0m      608       2384.91   0.000706509        109.27   1.004e-05       0.001      836  LS failed, Hessian reset 
+[2m[36m(f pid=15425)[0m      699       2385.33   0.000668813       74.9907      0.4853      0.4853      942   
+[2m[36m(f pid=15425)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=15425)[0m      743       2385.39   4.62858e-06       62.3557     6.4e-08       0.001     1037  LS failed, Hessian reset 
+[2m[36m(f pid=15425)[0m      756       2385.39   1.11347e-07       63.5568      0.5357      0.5357     1054   
+[2m[36m(f pid=15425)[0m Optimization terminated normally: 
+[2m[36m(f pid=15425)[0m   Convergence detected: relative gradient magnitude is below tolerance
+[2m[36m(f pid=15425)[0m prediction BTCUSDT 23.399789480475633 [42.66491521 42.64407481 42.5533787  42.68939599 42.89586902]
+[2m[36m(f pid=15425)[0m 43902.66 2190.9307 36625.6
+[2m[36m(f pid=15425)[0m btc balance:  4.966e-05
+[2m[36m(f pid=15425)[0m usdt balance:  125.76838291
+[2m[36m(f pid=15425)[0m 36590.62 0.001
+[2m[36m(f pid=15425)[0m [{'symbol': 'BTCUSDT', 'makerCommission': '0.001', 'takerCommission': '0.001'}]
+[2m[36m(f pid=15425)[0m exec buy order at :  36590.62 0.00273 0.001 99.9
+         DATE    Asset  signal   take_profit     stop_loss
+0  2022-01-22  BTCUSDT       1  43902.660156  34434.671875
+[2m[36m(f pid=15425)[0m {'symbol': 'BTCUSDT', 'orderId': 9076659382, 'orderListId': -1, 'clientOrderId': 'GHOuFjCUqx3eQgbmuuzEES', 'transactTime': 1642809854998, 'price': '36590.62000000', 'origQty': '0.00273000', 'executedQty': '0.00000000', 'cummulativeQuoteQty': '0.00000000', 'status': 'NEW', 'timeInForce': 'GTC', 'type': 'LIMIT', 'side': 'BUY', 'fills': []}
+/Users/kahingleung/PycharmProjects/timeseries
