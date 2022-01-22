@@ -833,3 +833,7 @@ To github.com:iwasnothing/ts-prediction-rsi.git
 0  2022-01-22  BTCUSDT       1  43902.660156  34434.671875
 [2m[36m(f pid=15425)[0m {'symbol': 'BTCUSDT', 'orderId': 9076659382, 'orderListId': -1, 'clientOrderId': 'GHOuFjCUqx3eQgbmuuzEES', 'transactTime': 1642809854998, 'price': '36590.62000000', 'origQty': '0.00273000', 'executedQty': '0.00000000', 'cummulativeQuoteQty': '0.00000000', 'status': 'NEW', 'timeInForce': 'GTC', 'type': 'LIMIT', 'side': 'BUY', 'fills': []}
 /Users/kahingleung/PycharmProjects/timeseries
+[main 6dd8fed] new signals files
+ 3 files changed, 44 insertions(+), 5 deletions(-)
+To github.com:iwasnothing/ts-prediction-rsi.git
+   a3bd783..6dd8fed  main -> main
