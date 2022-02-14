@@ -1,2 +1,4 @@
 VGT
 AAPL
+AMZN
+TSLA
