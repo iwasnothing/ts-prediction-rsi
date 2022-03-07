@@ -2802,3 +2802,67 @@ To github.com:iwasnothing/ts-prediction-rsi.git
 [2m[36m(f pid=61273)[0m 39366.7 0.001
 [2m[36m(f pid=61273)[0m [{'symbol': 'BTCUSDT', 'makerCommission': '0.001', 'takerCommission': '0.001'}]
 /Users/kahingleung/PycharmProjects/timeseries
+[main dd6bb50] new signals files
+ 3 files changed, 56 insertions(+), 2 deletions(-)
+To github.com:iwasnothing/ts-prediction-rsi.git
+   fa9f9ad..dd6bb50  main -> main
+[2m[36m(pid=71406)[0m /Users/kahingleung/PycharmProjects/timeseries/All_Functions_Master_File.py:168: RuntimeWarning: Mean of empty slice.
+[2m[36m(pid=71406)[0m   Data[i, where] = (Data[i - lookback + 1:i + 1, close].mean())
+[2m[36m(pid=71406)[0m /Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/numpy/core/_methods.py:189: RuntimeWarning: invalid value encountered in double_scalars
+[2m[36m(pid=71406)[0m   ret = ret.dtype.type(ret / rcount)
+['BTCUSDT']
+[2m[36m(f pid=71406)[0m Initial log joint probability = -20.3515
+[2m[36m(f pid=71406)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=71406)[0m       99       2425.39     0.0395777       213.234      0.2475           1      120   
+[2m[36m(f pid=71406)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=71406)[0m      199       2436.47    0.00166018       76.2598           1           1      244   
+[2m[36m(f pid=71406)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=71406)[0m      230       2440.28   0.000398601       164.947   3.084e-06       0.001      333  LS failed, Hessian reset 
+[2m[36m(f pid=71406)[0m      257       2443.88   0.000327243       137.558   2.643e-06       0.001      406  LS failed, Hessian reset 
+[2m[36m(f pid=71406)[0m      299       2444.73    0.00236733       80.4184           1           1      456   
+[2m[36m(f pid=71406)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=71406)[0m      399       2449.03   0.000662835       92.8869           1           1      582   
+[2m[36m(f pid=71406)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=71406)[0m      499       2449.27    0.00013669       83.7651       2.129      0.4445      719   
+[2m[36m(f pid=71406)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=71406)[0m      599       2458.15     0.0530059       453.006      0.4644           1      827   
+[2m[36m(f pid=71406)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=71406)[0m      699       2467.11     0.0123591       286.042       2.537           1      948   
+[2m[36m(f pid=71406)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=71406)[0m      799       2471.91    0.00267571       100.947           1           1     1075   
+[2m[36m(f pid=71406)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=71406)[0m      802       2471.97   0.000392758       177.749   3.657e-06       0.001     1113  LS failed, Hessian reset 
+[2m[36m(f pid=71406)[0m      899        2472.7    0.00128965       81.6426      0.3092      0.3092     1229   
+[2m[36m(f pid=71406)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=71406)[0m      905        2472.9    0.00152805       232.836   1.791e-05       0.001     1281  LS failed, Hessian reset 
+[2m[36m(f pid=71406)[0m      993       2473.76   6.04869e-05       68.1444   9.537e-07       0.001     1426  LS failed, Hessian reset 
+[2m[36m(f pid=71406)[0m      999       2473.76    1.3641e-05       69.2222      0.2488           1     1433   
+[2m[36m(f pid=71406)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=71406)[0m     1099       2474.13     0.0117805       107.599           1           1     1551   
+[2m[36m(f pid=71406)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=71406)[0m     1135       2475.18    0.00108174       239.436   9.495e-06       0.001     1643  LS failed, Hessian reset 
+[2m[36m(f pid=71406)[0m     1199       2476.49    0.00111455       79.1634      0.1028           1     1715   
+[2m[36m(f pid=71406)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=71406)[0m     1200        2476.5   0.000422736       118.527    5.34e-06       0.001     1756  LS failed, Hessian reset 
+[2m[36m(f pid=71406)[0m     1299       2476.87    0.00381168       93.0586           1           1     1881   
+[2m[36m(f pid=71406)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=71406)[0m     1399       2477.25   0.000696809       66.9931           1           1     2005   
+[2m[36m(f pid=71406)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=71406)[0m     1443       2477.43   0.000458985        83.647   6.008e-06       0.001     2108  LS failed, Hessian reset 
+[2m[36m(f pid=71406)[0m     1493       2477.63   0.000111758       73.8408   1.368e-06       0.001     2207  LS failed, Hessian reset 
+[2m[36m(f pid=71406)[0m     1499       2477.63   1.74362e-05       76.7275      0.7613      0.7613     2213   
+[2m[36m(f pid=71406)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=71406)[0m     1566       2477.65   2.53811e-05       77.6028   3.202e-07       0.001     2363  LS failed, Hessian reset 
+[2m[36m(f pid=71406)[0m     1599       2477.66   1.02897e-06       70.5756      0.9965      0.9965     2408   
+[2m[36m(f pid=71406)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=71406)[0m     1613       2477.66   1.15813e-07       72.4969      0.3891      0.3891     2425   
+[2m[36m(f pid=71406)[0m Optimization terminated normally: 
+[2m[36m(f pid=71406)[0m   Convergence detected: relative gradient magnitude is below tolerance
+[2m[36m(f pid=71406)[0m prediction BTCUSDT 43.56226816130064 [44.10007322 42.8327022  41.54903115 40.39402057 39.24749229]
+[2m[36m(f pid=71406)[0m btc balance:  1.421e-05
+[2m[36m(f pid=71406)[0m usdt balance:  139.16182613
+         DATE    Asset  signal  take_profit  stop_loss
+0  2022-03-07  BTCUSDT       0            0          0
+[2m[36m(f pid=71406)[0m 38321.15 0.001
+[2m[36m(f pid=71406)[0m [{'symbol': 'BTCUSDT', 'makerCommission': '0.001', 'takerCommission': '0.001'}]
+/Users/kahingleung/PycharmProjects/timeseries
