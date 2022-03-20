@@ -3486,3 +3486,41 @@ To github.com:iwasnothing/ts-prediction-rsi.git
  1 file changed, 55 insertions(+)
 To github.com:iwasnothing/ts-prediction-rsi.git
    612b39b..ebbdb83  main -> main
+[2m[36m(pid=42937)[0m /Users/kahingleung/PycharmProjects/timeseries/All_Functions_Master_File.py:168: RuntimeWarning: Mean of empty slice.
+[2m[36m(pid=42937)[0m   Data[i, where] = (Data[i - lookback + 1:i + 1, close].mean())
+[2m[36m(pid=42937)[0m /Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/numpy/core/_methods.py:189: RuntimeWarning: invalid value encountered in double_scalars
+[2m[36m(pid=42937)[0m   ret = ret.dtype.type(ret / rcount)
+['BTCUSDT']
+[2m[36m(f pid=42937)[0m Initial log joint probability = -18.3947
+[2m[36m(f pid=42937)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=42937)[0m       99       2438.34    0.00204304       292.043      0.5818      0.5818      114   
+[2m[36m(f pid=42937)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=42937)[0m      199       2458.46    0.00221629       85.8776           1           1      238   
+[2m[36m(f pid=42937)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=42937)[0m      285       2464.17     0.0007992        289.95   4.062e-06       0.001      378  LS failed, Hessian reset 
+[2m[36m(f pid=42937)[0m      299       2466.28    0.00328745       100.353      0.6912      0.6912      392   
+[2m[36m(f pid=42937)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=42937)[0m      399       2469.75     0.0153918       221.081     0.08853      0.9859      512   
+[2m[36m(f pid=42937)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=42937)[0m      400       2469.78   0.000272609       93.9415   1.233e-06       0.001      558  LS failed, Hessian reset 
+[2m[36m(f pid=42937)[0m      499       2471.55     0.0117943       123.092           1           1      677   
+[2m[36m(f pid=42937)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=42937)[0m      599       2473.01   0.000427554       67.8644      0.9471      0.9471      795   
+[2m[36m(f pid=42937)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=42937)[0m      656       2479.02   0.000961124        255.87    5.54e-06       0.001      902  LS failed, Hessian reset 
+[2m[36m(f pid=42937)[0m      699       2482.79   0.000661327       90.9435           1           1      954   
+[2m[36m(f pid=42937)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=42937)[0m      766       2483.14   0.000146314       81.9325   1.922e-06       0.001     1103  LS failed, Hessian reset 
+[2m[36m(f pid=42937)[0m      799       2483.15   4.31453e-07       64.6474      0.8642      0.8642     1144   
+[2m[36m(f pid=42937)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=42937)[0m      815       2483.15   1.05107e-07       84.1621      0.1618      0.5357     1167   
+[2m[36m(f pid=42937)[0m Optimization terminated normally: 
+[2m[36m(f pid=42937)[0m   Convergence detected: relative gradient magnitude is below tolerance
+[2m[36m(f pid=42937)[0m prediction BTCUSDT 56.62108524829929 [40.07850633 39.97906248 40.02938146 40.08916948 40.30244196]
+[2m[36m(f pid=42937)[0m btc balance:  1.421e-05
+[2m[36m(f pid=42937)[0m usdt balance:  139.16182613
+         DATE    Asset  signal  take_profit  stop_loss
+0  2022-03-20  BTCUSDT       0            0          0
+[2m[36m(f pid=42937)[0m 42225.06 0.001
+[2m[36m(f pid=42937)[0m [{'symbol': 'BTCUSDT', 'makerCommission': '0.001', 'takerCommission': '0.001'}]
+/Users/kahingleung/PycharmProjects/timeseries
