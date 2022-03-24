@@ -3696,3 +3696,7 @@ To github.com:iwasnothing/ts-prediction-rsi.git
 [2m[36m(f pid=78622)[0m 42933.71 0.001
 [2m[36m(f pid=78622)[0m [{'symbol': 'BTCUSDT', 'makerCommission': '0.001', 'takerCommission': '0.001'}]
 /Users/kahingleung/PycharmProjects/timeseries
+[main 0aacdbe] new signals files
+ 1 file changed, 40 insertions(+)
+To github.com:iwasnothing/ts-prediction-rsi.git
+   778eb8c..0aacdbe  main -> main
