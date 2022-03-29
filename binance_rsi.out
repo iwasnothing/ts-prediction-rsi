@@ -3882,3 +3882,41 @@ To github.com:iwasnothing/ts-prediction-rsi.git
  3 files changed, 60 insertions(+), 2 deletions(-)
 To github.com:iwasnothing/ts-prediction-rsi.git
    a31aa68..756974b  main -> main
+[2m[36m(pid=23608)[0m /Users/kahingleung/PycharmProjects/timeseries/All_Functions_Master_File.py:168: RuntimeWarning: Mean of empty slice.
+[2m[36m(pid=23608)[0m   Data[i, where] = (Data[i - lookback + 1:i + 1, close].mean())
+[2m[36m(pid=23608)[0m /Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/numpy/core/_methods.py:189: RuntimeWarning: invalid value encountered in double_scalars
+[2m[36m(pid=23608)[0m   ret = ret.dtype.type(ret / rcount)
+['BTCUSDT']
+[2m[36m(f pid=23608)[0m Initial log joint probability = -17.5548
+[2m[36m(f pid=23608)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=23608)[0m       99       2456.63    0.00320007       178.114       0.472           1      127   
+[2m[36m(f pid=23608)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=23608)[0m      199       2469.77     0.0904463       153.636           1           1      248   
+[2m[36m(f pid=23608)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=23608)[0m      299       2479.19    0.00427517        132.49           1           1      369   
+[2m[36m(f pid=23608)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=23608)[0m      399       2481.43    0.00125131       82.6136           1           1      493   
+[2m[36m(f pid=23608)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=23608)[0m      499       2485.65    0.00115987       54.9956           1           1      618   
+[2m[36m(f pid=23608)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=23608)[0m      599       2487.47    0.00642005       91.2465      0.9978      0.9978      744   
+[2m[36m(f pid=23608)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=23608)[0m      630        2490.2   0.000897207       243.995   8.019e-06       0.001      824  LS failed, Hessian reset 
+[2m[36m(f pid=23608)[0m      699       2492.06   8.20235e-05       104.314     0.03135      0.3985      911   
+[2m[36m(f pid=23608)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=23608)[0m      799       2492.15   2.32083e-06       72.5252           1           1     1041   
+[2m[36m(f pid=23608)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=23608)[0m      890       2492.31   0.000267533       72.9736   3.259e-06       0.001     1203  LS failed, Hessian reset 
+[2m[36m(f pid=23608)[0m      899       2492.34   0.000573594       55.6356           1           1     1212   
+[2m[36m(f pid=23608)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=23608)[0m      945       2492.43   1.06334e-07       55.6917      0.1577      0.4993     1274   
+[2m[36m(f pid=23608)[0m Optimization terminated normally: 
+[2m[36m(f pid=23608)[0m   Convergence detected: relative gradient magnitude is below tolerance
+[2m[36m(f pid=23608)[0m prediction BTCUSDT 69.46967935236667 [45.8142937  46.14480106 46.55841937 46.88656543 47.18020501]
+[2m[36m(f pid=23608)[0m btc balance:  1.421e-05
+[2m[36m(f pid=23608)[0m usdt balance:  139.16182613
+         DATE    Asset  signal  take_profit  stop_loss
+0  2022-03-29  BTCUSDT       0            0          0
+[2m[36m(f pid=23608)[0m 47169.99 0.001
+[2m[36m(f pid=23608)[0m [{'symbol': 'BTCUSDT', 'makerCommission': '0.001', 'takerCommission': '0.001'}]
+/Users/kahingleung/PycharmProjects/timeseries
