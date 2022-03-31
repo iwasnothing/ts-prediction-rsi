@@ -3955,3 +3955,47 @@ To github.com:iwasnothing/ts-prediction-rsi.git
  1 file changed, 27 insertions(+)
 To github.com:iwasnothing/ts-prediction-rsi.git
    56c1dec..2fbf1b0  main -> main
+[2m[36m(pid=41369)[0m /Users/kahingleung/PycharmProjects/timeseries/All_Functions_Master_File.py:168: RuntimeWarning: Mean of empty slice.
+[2m[36m(pid=41369)[0m   Data[i, where] = (Data[i - lookback + 1:i + 1, close].mean())
+[2m[36m(pid=41369)[0m /Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/numpy/core/_methods.py:189: RuntimeWarning: invalid value encountered in double_scalars
+[2m[36m(pid=41369)[0m   ret = ret.dtype.type(ret / rcount)
+['BTCUSDT']
+[2m[36m(f pid=41369)[0m Initial log joint probability = -17.7976
+[2m[36m(f pid=41369)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=41369)[0m       99       2456.36     0.0034174       187.824      0.2287      0.2287      118   
+[2m[36m(f pid=41369)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=41369)[0m      165       2463.85   0.000408045       152.336   1.662e-06       0.001      235  LS failed, Hessian reset 
+[2m[36m(f pid=41369)[0m      199       2466.25    0.00828043       111.561           1           1      274   
+[2m[36m(f pid=41369)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=41369)[0m      299          2481    0.00302777       192.426     0.07339           1      389   
+[2m[36m(f pid=41369)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=41369)[0m      399       2483.71    0.00486304       87.6436           1           1      521   
+[2m[36m(f pid=41369)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=41369)[0m      442       2485.45   0.000231817       105.673   2.341e-06       0.001      608  LS failed, Hessian reset 
+[2m[36m(f pid=41369)[0m      499       2487.42    0.00367712       104.753           1           1      680   
+[2m[36m(f pid=41369)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=41369)[0m      570       2489.13    0.00274658       142.837   3.414e-05       0.001      808  LS failed, Hessian reset 
+[2m[36m(f pid=41369)[0m      599       2490.05   0.000214044       69.8436      0.4042           1      844   
+[2m[36m(f pid=41369)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=41369)[0m      699       2490.53    0.00547321       121.246           1           1      965   
+[2m[36m(f pid=41369)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=41369)[0m      738       2492.58   0.000962557       258.345   1.052e-05       0.001     1057  LS failed, Hessian reset 
+[2m[36m(f pid=41369)[0m      792       2493.69   0.000479233       96.7617   5.287e-06       0.001     1156  LS failed, Hessian reset 
+[2m[36m(f pid=41369)[0m      799       2493.72   0.000136384        58.373      0.1811           1     1165   
+[2m[36m(f pid=41369)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=41369)[0m      808       2493.75   0.000142317       66.2136   1.987e-06       0.001     1214  LS failed, Hessian reset 
+[2m[36m(f pid=41369)[0m      899       2494.52    0.00136764       66.2597      0.5771           1     1332   
+[2m[36m(f pid=41369)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=41369)[0m      970       2494.65   8.06667e-08       71.9471      0.3612           1     1436   
+[2m[36m(f pid=41369)[0m Optimization terminated normally: 
+[2m[36m(f pid=41369)[0m   Convergence detected: relative gradient magnitude is below tolerance
+[2m[36m(f pid=41369)[0m prediction BTCUSDT 67.77013663765428 [47.41181952 47.74345225 48.03147752 48.43670429 48.70627438]
+[2m[36m(f pid=41369)[0m btc balance:  1.421e-05
+[2m[36m(f pid=41369)[0m usdt balance:  139.16182613
+         DATE    Asset  signal  take_profit  stop_loss
+0  2022-03-31  BTCUSDT       0            0          0
+[2m[36m(f pid=41369)[0m 47015.5 0.001
+[2m[36m(f pid=41369)[0m [{'symbol': 'BTCUSDT', 'makerCommission': '0.001', 'takerCommission': '0.001'}]
+/Users/kahingleung/PycharmProjects/timeseries
+2022-03-31 08:04:22.950 xcodebuild[41391:25732367] Requested but did not find extension point with identifier Xcode.IDEKit.ExtensionSentinelHostApplications for extension Xcode.DebuggerFoundation.AppExtensionHosts.watchOS of plug-in com.apple.dt.IDEWatchSupportCore
+2022-03-31 08:04:22.950 xcodebuild[41391:25732367] Requested but did not find extension point with identifier Xcode.IDEKit.ExtensionPointIdentifierToBundleIdentifier for extension Xcode.DebuggerFoundation.AppExtensionToBundleIdentifierMap.watchOS of plug-in com.apple.dt.IDEWatchSupportCore
