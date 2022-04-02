@@ -9,6 +9,7 @@ from prophet import Prophet
 from darts.models import NBEATSModel
 from darts import TimeSeries
 import numpy as np
+import statistics
 import pandas as pd
 from datetime import datetime,timedelta
 import os
@@ -92,7 +93,7 @@ def execOrder(tic,signal):
 def f(stock):
     signal = 0
     high,low = 0,0
-    lookback = 14
+    lookback = 20
     future_range = 5
     if stock == 'BTCUSDT':
         data,ts = getBTC(stock,'2017-12-01')
@@ -110,17 +111,18 @@ def f(stock):
     m.add_seasonality(name='half_year', period=182, fourier_order=5)
     m.add_country_holidays(country_name='US')
     m.fit(df)
-    pred_period = 5
+    pred_period = 10
     future = m.make_future_dataframe(periods=pred_period)
     forecast = m.predict(future)
     #print(forecast)
     pred = forecast.iloc[-1*pred_period:]['yhat'].values
     last_Rsi = my_data[-1,4]
     print("prediction",stock,last_Rsi,pred)
-    if last_Rsi < 40 and pred[0] > last_Rsi  and pred[-1] > pred[0]:
+    med = statistics.median(pred)
+    if last_Rsi < 40 and pred[0] > last_Rsi  and med > pred[0]:
         signal = 1
         high,low = take_profit(data, 3, lookback)
-    elif last_Rsi > 70  and pred[0] < last_Rsi and pred[-1] < pred[0]:
+    elif last_Rsi > 70  and pred[0] < last_Rsi and med < pred[0]:
         signal = -1
     execOrder(stock,signal)
     return {"DATE": today_str, "Asset": stock, "signal": signal, "take_profit": high, "stop_loss": low}
