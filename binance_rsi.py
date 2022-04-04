@@ -93,7 +93,7 @@ def execOrder(tic,signal):
 def f(stock):
     signal = 0
     high,low = 0,0
-    lookback = 20
+    lookback = 250
     future_range = 5
     if stock == 'BTCUSDT':
         data,ts = getBTC(stock,'2017-12-01')
@@ -119,10 +119,10 @@ def f(stock):
     last_Rsi = my_data[-1,4]
     print("prediction",stock,last_Rsi,pred)
     med = statistics.median(pred)
-    if last_Rsi < 40 and pred[0] > last_Rsi  and med > pred[0]:
+    if last_Rsi < 40 and med > last_Rsi:
         signal = 1
         high,low = take_profit(data, 3, lookback)
-    elif last_Rsi > 70  and pred[0] < last_Rsi and med < pred[0]:
+    elif last_Rsi > 70  and med < last_Rsi:
         signal = -1
     execOrder(stock,signal)
     return {"DATE": today_str, "Asset": stock, "signal": signal, "take_profit": high, "stop_loss": low}
