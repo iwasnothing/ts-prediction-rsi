@@ -4531,3 +4531,7 @@ To github.com:iwasnothing/ts-prediction-rsi.git
 [2m[36m(f pid=61049)[0m exec buy order at :  39660.0 0.00252 0.001 99.9
 [2m[36m(f pid=61049)[0m {'symbol': 'BTCUSDT', 'orderId': 10159504024, 'orderListId': -1, 'clientOrderId': '0eKq5xnozF2FDbFr9f2SVi', 'transactTime': 1649721855123, 'price': '39660.00000000', 'origQty': '0.00252000', 'executedQty': '0.00252000', 'cummulativeQuoteQty': '99.94320000', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'LIMIT', 'side': 'BUY', 'fills': [{'price': '39660.00000000', 'qty': '0.00252000', 'commission': '0.00000252', 'commissionAsset': 'BTC', 'tradeId': 1323378183}]}
 /Users/kahingleung/PycharmProjects/timeseries
+[main 26f0227] new signals files
+ 4 files changed, 54 insertions(+), 6 deletions(-)
+To github.com:iwasnothing/ts-prediction-rsi.git
+   416b983..26f0227  main -> main
