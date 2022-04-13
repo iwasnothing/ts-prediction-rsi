@@ -4580,3 +4580,7 @@ To github.com:iwasnothing/ts-prediction-rsi.git
 [2m[36m(f pid=48848)[0m [{'symbol': 'BTCUSDT', 'makerCommission': '0.001', 'takerCommission': '0.001'}]
 [2m[36m(f pid=48848)[0m exec buy order at :  40079.87 0.00249 0.001 99.9
 /Users/kahingleung/PycharmProjects/timeseries
+[main 5dd8de5] new signals files
+ 3 files changed, 48 insertions(+), 3 deletions(-)
+To github.com:iwasnothing/ts-prediction-rsi.git
+   889ce16..5dd8de5  main -> main
