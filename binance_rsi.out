@@ -4634,3 +4634,10 @@ To github.com:iwasnothing/ts-prediction-rsi.git
 /Users/kahingleung/PycharmProjects/timeseries
 2022-04-14 08:04:21.114 xcodebuild[12774:359316] Requested but did not find extension point with identifier Xcode.IDEKit.ExtensionSentinelHostApplications for extension Xcode.DebuggerFoundation.AppExtensionHosts.watchOS of plug-in com.apple.dt.IDEWatchSupportCore
 2022-04-14 08:04:21.115 xcodebuild[12774:359316] Requested but did not find extension point with identifier Xcode.IDEKit.ExtensionPointIdentifierToBundleIdentifier for extension Xcode.DebuggerFoundation.AppExtensionToBundleIdentifierMap.watchOS of plug-in com.apple.dt.IDEWatchSupportCore
+[main 0c08597] new signals files
+ 1 file changed, 50 insertions(+)
+Host key verification failed.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
