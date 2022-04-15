@@ -4679,3 +4679,10 @@ and the repository exists.
 [2m[36m(f pid=24092)[0m [{'symbol': 'BTCUSDT', 'makerCommission': '0.001', 'takerCommission': '0.001'}]
 [2m[36m(f pid=24092)[0m exec buy order at :  39977.77 0.0025 0.001 99.9
 /Users/kahingleung/PycharmProjects/timeseries
+[main 0102c76] new signals files
+ 3 files changed, 40 insertions(+), 2 deletions(-)
+Host key verification failed.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
