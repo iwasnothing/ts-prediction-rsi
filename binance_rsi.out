@@ -5317,3 +5317,42 @@ To github.com:iwasnothing/ts-prediction-rsi.git
  6 files changed, 65 insertions(+), 23 deletions(-)
 To github.com:iwasnothing/ts-prediction-rsi.git
    ccf7792..f2f8401  main -> main
+[2m[36m(pid=84958)[0m /Users/kahingleung/PycharmProjects/timeseries/All_Functions_Master_File.py:168: RuntimeWarning: Mean of empty slice.
+[2m[36m(pid=84958)[0m   Data[i, where] = (Data[i - lookback + 1:i + 1, close].mean())
+[2m[36m(pid=84958)[0m /Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/numpy/core/_methods.py:189: RuntimeWarning: invalid value encountered in double_scalars
+[2m[36m(pid=84958)[0m   ret = ret.dtype.type(ret / rcount)
+['BTCUSDT']
+[2m[36m(f pid=84958)[0m Initial log joint probability = -25.0041
+[2m[36m(f pid=84958)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=84958)[0m       99       2514.96    0.00409215       260.722      0.4213      0.4213      118   
+[2m[36m(f pid=84958)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=84958)[0m      199       2526.26     0.0144218       345.385      0.2842           1      238   
+[2m[36m(f pid=84958)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=84958)[0m      299       2537.67   0.000283394       144.542      0.5695      0.5695      361   
+[2m[36m(f pid=84958)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=84958)[0m      399       2543.51    0.00886088       253.191           1           1      482   
+[2m[36m(f pid=84958)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=84958)[0m      459       2550.61   0.000346732       153.083   3.178e-06       0.001      594  LS failed, Hessian reset 
+[2m[36m(f pid=84958)[0m      499        2553.9    0.00487741       114.203           1           1      643   
+[2m[36m(f pid=84958)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=84958)[0m      528       2555.69   0.000171529       70.4747   1.166e-06       0.001      716  LS failed, Hessian reset 
+[2m[36m(f pid=84958)[0m      599       2556.89   2.63583e-05       65.9106           1           1      803   
+[2m[36m(f pid=84958)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=84958)[0m      619        2556.9   9.66984e-05       82.0869   1.184e-06       0.001      867  LS failed, Hessian reset 
+[2m[36m(f pid=84958)[0m      688       2556.94   0.000688956       156.251   8.834e-06       0.001      986  LS failed, Hessian reset 
+[2m[36m(f pid=84958)[0m      699       2556.97   0.000121641       78.5514       2.207      0.5616     1001   
+[2m[36m(f pid=84958)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=84958)[0m      737       2556.98   1.51228e-07       63.8381      0.4229           1     1053   
+[2m[36m(f pid=84958)[0m Optimization terminated normally: 
+[2m[36m(f pid=84958)[0m   Convergence detected: relative gradient magnitude is below tolerance
+[2m[36m(f pid=84958)[0m prediction BTCUSDT 37.932533789258734 [48.25585676 48.36505009 48.61069162 48.82938154 49.15275612 49.42028564
+[2m[36m(f pid=84958)[0m  49.66874804 50.09673492 50.35342685 50.69978957]
+[2m[36m(f pid=84958)[0m 67525.83 8023.289 37723.12
+[2m[36m(f pid=84958)[0m btc balance:  0.00253169
+[2m[36m(f pid=84958)[0m usdt balance:  39.21862613
+         DATE    Asset  signal   take_profit     stop_loss
+0  2022-05-01  BTCUSDT       1  67525.828125  29699.832031
+[2m[36m(f pid=84958)[0m 37705.37 0.001
+[2m[36m(f pid=84958)[0m [{'symbol': 'BTCUSDT', 'makerCommission': '0.001', 'takerCommission': '0.001'}]
+[2m[36m(f pid=84958)[0m exec buy order at :  37705.37 0.00265 0.001 99.9
+/Users/kahingleung/PycharmProjects/timeseries
