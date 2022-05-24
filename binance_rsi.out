@@ -6381,3 +6381,7 @@ To github.com:iwasnothing/ts-prediction-rsi.git
          DATE    Asset  signal   take_profit     stop_loss
 0  2022-05-24  BTCUSDT       1  67525.828125  19935.304688
 /Users/kahingleung/PycharmProjects/timeseries
+[main 55388c1] new signals files
+ 3 files changed, 52 insertions(+), 5 deletions(-)
+To github.com:iwasnothing/ts-prediction-rsi.git
+   d92ac95..55388c1  main -> main
