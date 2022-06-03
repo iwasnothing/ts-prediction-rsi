@@ -6745,3 +6745,41 @@ To github.com:iwasnothing/ts-prediction-rsi.git
  3 files changed, 33 insertions(+), 2 deletions(-)
 To github.com:iwasnothing/ts-prediction-rsi.git
    c4692ff..75798a5  main -> main
+[2m[36m(pid=99058)[0m /Users/kahingleung/PycharmProjects/timeseries/All_Functions_Master_File.py:168: RuntimeWarning: Mean of empty slice.
+[2m[36m(pid=99058)[0m   Data[i, where] = (Data[i - lookback + 1:i + 1, close].mean())
+[2m[36m(pid=99058)[0m /Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/numpy/core/_methods.py:189: RuntimeWarning: invalid value encountered in double_scalars
+[2m[36m(pid=99058)[0m   ret = ret.dtype.type(ret / rcount)
+['BTCUSDT']
+[2m[36m(f pid=99058)[0m Initial log joint probability = -26.8223
+[2m[36m(f pid=99058)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=99058)[0m       99       2567.12     0.0256311       854.717          10           1      126   
+[2m[36m(f pid=99058)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=99058)[0m      199        2586.9     0.0143331       122.515           1           1      237   
+[2m[36m(f pid=99058)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=99058)[0m      218       2588.28   0.000271953        121.29   1.773e-06       0.001      290  LS failed, Hessian reset 
+[2m[36m(f pid=99058)[0m      299       2589.47   5.80711e-06       76.8915      0.8221      0.8221      406   
+[2m[36m(f pid=99058)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=99058)[0m      362       2592.77   0.000553056        238.72   1.849e-06       0.001      531  LS failed, Hessian reset 
+[2m[36m(f pid=99058)[0m      399       2594.24    0.00148941        65.136           1           1      576   
+[2m[36m(f pid=99058)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=99058)[0m      499       2595.87     0.0231731       143.307           1           1      705   
+[2m[36m(f pid=99058)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=99058)[0m      599       2597.26   0.000728062        82.964       2.094      0.5393      832   
+[2m[36m(f pid=99058)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=99058)[0m      699       2604.46      0.025166       152.775           1           1      943   
+[2m[36m(f pid=99058)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=99058)[0m      799       2608.04   0.000353614       81.3482           1           1     1058   
+[2m[36m(f pid=99058)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=99058)[0m      808       2608.14   0.000495218       77.0939   5.096e-06       0.001     1103  LS failed, Hessian reset 
+[2m[36m(f pid=99058)[0m      844       2608.17   9.26399e-08       71.7468      0.2645           1     1155   
+[2m[36m(f pid=99058)[0m Optimization terminated normally: 
+[2m[36m(f pid=99058)[0m   Convergence detected: relative gradient magnitude is below tolerance
+[2m[36m(f pid=99058)[0m prediction BTCUSDT 46.23627860399562 [39.52385012 39.32267665 39.23896423 39.05091469 38.94950476 38.79779311
+[2m[36m(f pid=99058)[0m  38.71809953 38.58569859 38.42860276 38.40135767]
+[2m[36m(f pid=99058)[0m btc balance:  0.00253169
+[2m[36m(f pid=99058)[0m usdt balance:  39.21862613
+         DATE    Asset  signal  take_profit  stop_loss
+0  2022-06-03  BTCUSDT       0            0          0
+[2m[36m(f pid=99058)[0m 30423.01 0.001
+[2m[36m(f pid=99058)[0m [{'symbol': 'BTCUSDT', 'makerCommission': '0.001', 'takerCommission': '0.001'}]
+/Users/kahingleung/PycharmProjects/timeseries
