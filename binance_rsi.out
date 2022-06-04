@@ -6787,3 +6787,37 @@ To github.com:iwasnothing/ts-prediction-rsi.git
  3 files changed, 40 insertions(+), 2 deletions(-)
 To github.com:iwasnothing/ts-prediction-rsi.git
    d8411c2..53009f1  main -> main
+[2m[36m(pid=2031)[0m /Users/kahingleung/PycharmProjects/timeseries/All_Functions_Master_File.py:168: RuntimeWarning: Mean of empty slice.
+[2m[36m(pid=2031)[0m   Data[i, where] = (Data[i - lookback + 1:i + 1, close].mean())
+[2m[36m(pid=2031)[0m /Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/numpy/core/_methods.py:189: RuntimeWarning: invalid value encountered in double_scalars
+[2m[36m(pid=2031)[0m   ret = ret.dtype.type(ret / rcount)
+['BTCUSDT']
+[2m[36m(f pid=2031)[0m Initial log joint probability = -26.5363
+[2m[36m(f pid=2031)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=2031)[0m       99       2574.23     0.0266579       359.729           1           1      117   
+[2m[36m(f pid=2031)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=2031)[0m      199       2588.17     0.0011248       84.2196      0.4175           1      245   
+[2m[36m(f pid=2031)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=2031)[0m      238       2590.32   0.000181647       84.2974   1.728e-06       0.001      339  LS failed, Hessian reset 
+[2m[36m(f pid=2031)[0m      299       2591.14     0.0010154       94.2498      0.6576      0.6576      415   
+[2m[36m(f pid=2031)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=2031)[0m      399       2597.93    2.4608e-05       67.8836      0.3793           1      546   
+[2m[36m(f pid=2031)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=2031)[0m      499        2601.4     0.0193771        87.982           1           1      659   
+[2m[36m(f pid=2031)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=2031)[0m      599       2602.36   0.000570532       84.9233      0.3701           1      781   
+[2m[36m(f pid=2031)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=2031)[0m      656       2602.56   1.42983e-07       62.8179      0.2579           1      856   
+[2m[36m(f pid=2031)[0m Optimization terminated normally: 
+[2m[36m(f pid=2031)[0m   Convergence detected: relative gradient magnitude is below tolerance
+[2m[36m(f pid=2031)[0m prediction BTCUSDT 43.65753806225492 [39.89449026 39.86699523 39.66337898 39.57663308 39.43809685 39.36921384
+[2m[36m(f pid=2031)[0m  39.25283931 39.09248294 39.10539736 38.95101299]
+[2m[36m(f pid=2031)[0m btc balance:  0.00253169
+[2m[36m(f pid=2031)[0m usdt balance:  39.21862613
+         DATE    Asset  signal  take_profit  stop_loss
+0  2022-06-04  BTCUSDT       0            0          0
+[2m[36m(f pid=2031)[0m 29700.81 0.001
+[2m[36m(f pid=2031)[0m [{'symbol': 'BTCUSDT', 'makerCommission': '0.001', 'takerCommission': '0.001'}]
+/Users/kahingleung/PycharmProjects/timeseries
+2022-06-04 08:04:25.602 xcodebuild[2057:24287197] Requested but did not find extension point with identifier Xcode.IDEKit.ExtensionSentinelHostApplications for extension Xcode.DebuggerFoundation.AppExtensionHosts.watchOS of plug-in com.apple.dt.IDEWatchSupportCore
+2022-06-04 08:04:25.602 xcodebuild[2057:24287197] Requested but did not find extension point with identifier Xcode.IDEKit.ExtensionPointIdentifierToBundleIdentifier for extension Xcode.DebuggerFoundation.AppExtensionToBundleIdentifierMap.watchOS of plug-in com.apple.dt.IDEWatchSupportCore
