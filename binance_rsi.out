@@ -7515,3 +7515,44 @@ To github.com:iwasnothing/ts-prediction-rsi.git
 [2m[36m(f pid=20736)[0m [{'symbol': 'BTCUSDT', 'makerCommission': '0.001', 'takerCommission': '0.001'}]
 [2m[36m(f pid=20736)[0m exec buy order at :  20510.01 0.00487 0.001 99.9
 /Users/kahingleung/PycharmProjects/timeseries
+[main 3e76231] new signals files
+ 3 files changed, 38 insertions(+), 3 deletions(-)
+To github.com:iwasnothing/ts-prediction-rsi.git
+   9c90cd7..3e76231  main -> main
+[2m[36m(pid=24209)[0m /Users/kahingleung/PycharmProjects/timeseries/All_Functions_Master_File.py:168: RuntimeWarning: Mean of empty slice.
+[2m[36m(pid=24209)[0m   Data[i, where] = (Data[i - lookback + 1:i + 1, close].mean())
+[2m[36m(pid=24209)[0m /Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/numpy/core/_methods.py:189: RuntimeWarning: invalid value encountered in double_scalars
+[2m[36m(pid=24209)[0m   ret = ret.dtype.type(ret / rcount)
+['BTCUSDT']
+[2m[36m(f pid=24209)[0m Initial log joint probability = -32.0452
+[2m[36m(f pid=24209)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=24209)[0m       99       2608.99     0.0595858       231.464           1           1      130   
+[2m[36m(f pid=24209)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=24209)[0m      199       2621.13     0.0127046       230.659           1           1      245   
+[2m[36m(f pid=24209)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=24209)[0m      299       2630.42     0.0025833       273.413      0.2443      0.2443      362   
+[2m[36m(f pid=24209)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=24209)[0m      367       2633.19   0.000190237       89.9827   1.522e-06       0.001      497  LS failed, Hessian reset 
+[2m[36m(f pid=24209)[0m      399       2633.55    0.00114327       93.9853           1           1      534   
+[2m[36m(f pid=24209)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=24209)[0m      499       2634.87      0.002351       172.787           1           1      658   
+[2m[36m(f pid=24209)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=24209)[0m      537       2642.12   0.000482971       162.751   1.052e-06       0.001      740  LS failed, Hessian reset 
+[2m[36m(f pid=24209)[0m      599       2643.64   5.39372e-05       67.5882      0.9162      0.9162      823   
+[2m[36m(f pid=24209)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=24209)[0m      633       2643.74   0.000280324       88.3069   3.636e-06       0.001      904  LS failed, Hessian reset 
+[2m[36m(f pid=24209)[0m      672       2643.75   1.44942e-05       82.4312   1.864e-07       0.001      996  LS failed, Hessian reset 
+[2m[36m(f pid=24209)[0m      692       2643.76   2.43801e-07       68.4813           1           1     1019   
+[2m[36m(f pid=24209)[0m Optimization terminated normally: 
+[2m[36m(f pid=24209)[0m   Convergence detected: relative gradient magnitude is below tolerance
+[2m[36m(f pid=24209)[0m prediction BTCUSDT 28.77457343928525 [38.63918626 38.49068799 38.39527574 38.20657659 38.00352272 37.86797351
+[2m[36m(f pid=24209)[0m  37.56145711 37.34454407 37.01913447 36.71923678]
+[2m[36m(f pid=24209)[0m 67525.83 10824.349 20577.99
+[2m[36m(f pid=24209)[0m btc balance:  0.00253169
+[2m[36m(f pid=24209)[0m usdt balance:  39.21862613
+         DATE    Asset  signal   take_profit    stop_loss
+0  2022-06-21  BTCUSDT       1  67525.828125  9753.641602
+[2m[36m(f pid=24209)[0m 20571.03 0.001
+[2m[36m(f pid=24209)[0m [{'symbol': 'BTCUSDT', 'makerCommission': '0.001', 'takerCommission': '0.001'}]
+[2m[36m(f pid=24209)[0m exec buy order at :  20571.03 0.00486 0.001 99.9
+/Users/kahingleung/PycharmProjects/timeseries
