@@ -8747,3 +8747,41 @@ binance.exceptions.BinanceAPIException: APIError(code=-1021): Timestamp for this
  1 file changed, 59 insertions(+)
 To github.com:iwasnothing/ts-prediction-rsi.git
    dbce34b..7076d05  main -> main
+[2m[36m(pid=48303)[0m /Users/kahingleung/PycharmProjects/timeseries/All_Functions_Master_File.py:168: RuntimeWarning: Mean of empty slice.
+[2m[36m(pid=48303)[0m   Data[i, where] = (Data[i - lookback + 1:i + 1, close].mean())
+[2m[36m(pid=48303)[0m /Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/numpy/core/_methods.py:189: RuntimeWarning: invalid value encountered in double_scalars
+[2m[36m(pid=48303)[0m   ret = ret.dtype.type(ret / rcount)
+['BTCUSDT']
+[2m[36m(f pid=48303)[0m Initial log joint probability = -27.1737
+[2m[36m(f pid=48303)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=48303)[0m       99       2654.44    0.00822189       480.939      0.2052      0.8498      121   
+[2m[36m(f pid=48303)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=48303)[0m      199       2670.26     0.0188659       128.192           1           1      244   
+[2m[36m(f pid=48303)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=48303)[0m      299       2678.92    0.00066017       78.9718           1           1      366   
+[2m[36m(f pid=48303)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=48303)[0m      399       2682.53    0.00510279       114.501           1           1      482   
+[2m[36m(f pid=48303)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=48303)[0m      457       2688.06   0.000180363       85.1515   1.328e-06       0.001      596  LS failed, Hessian reset 
+[2m[36m(f pid=48303)[0m      496       2689.14   0.000629886       209.677   6.211e-06       0.001      675  LS failed, Hessian reset 
+[2m[36m(f pid=48303)[0m      499       2689.18    0.00030098       73.7215           1           1      678   
+[2m[36m(f pid=48303)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=48303)[0m      599       2689.54   0.000695104       81.1278           1           1      803   
+[2m[36m(f pid=48303)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=48303)[0m      699       2692.15    0.00484255       100.624      0.5915      0.5915      913   
+[2m[36m(f pid=48303)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=48303)[0m      799       2694.32   3.42143e-05        68.482      0.1596     0.01596     1035   
+[2m[36m(f pid=48303)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=48303)[0m      817       2694.42   0.000170808       72.7822   1.135e-06       0.001     1098  LS failed, Hessian reset 
+[2m[36m(f pid=48303)[0m      862       2694.46   8.36369e-08       69.5564      0.2938           1     1160   
+[2m[36m(f pid=48303)[0m Optimization terminated normally: 
+[2m[36m(f pid=48303)[0m   Convergence detected: relative gradient magnitude is below tolerance
+[2m[36m(f pid=48303)[0m prediction BTCUSDT 49.22515117235998 [29.83654954 29.48966962 29.32600627 29.187847   29.18332596 29.23526263
+[2m[36m(f pid=48303)[0m  29.38892188 29.71624118 30.04642014 30.62183461]
+[2m[36m(f pid=48303)[0m btc balance:  0.00253169
+[2m[36m(f pid=48303)[0m usdt balance:  39.21862613
+         DATE    Asset  signal  take_profit  stop_loss
+0  2022-07-17  BTCUSDT       0            0          0
+[2m[36m(f pid=48303)[0m 21233.27 0
+[2m[36m(f pid=48303)[0m [{'symbol': 'BTCUSDT', 'makerCommission': '0', 'takerCommission': '0'}]
+/Users/kahingleung/PycharmProjects/timeseries
