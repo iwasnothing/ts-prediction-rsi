@@ -9723,3 +9723,63 @@ To github.com:iwasnothing/ts-prediction-rsi.git
  3 files changed, 43 insertions(+), 2 deletions(-)
 To github.com:iwasnothing/ts-prediction-rsi.git
    00a5385..7f2ee98  main -> main
+[2m[36m(pid=83070)[0m /Users/kahingleung/PycharmProjects/timeseries/All_Functions_Master_File.py:168: RuntimeWarning: Mean of empty slice.
+[2m[36m(pid=83070)[0m   Data[i, where] = (Data[i - lookback + 1:i + 1, close].mean())
+[2m[36m(pid=83070)[0m /Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/numpy/core/_methods.py:189: RuntimeWarning: invalid value encountered in double_scalars
+[2m[36m(pid=83070)[0m   ret = ret.dtype.type(ret / rcount)
+['BTCUSDT']
+[2m[36m(f pid=83070)[0m Initial log joint probability = -19.857
+[2m[36m(f pid=83070)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=83070)[0m       99       2673.36     0.0105205       149.053           1           1      116   
+[2m[36m(f pid=83070)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=83070)[0m      199       2690.71    0.00449156       246.636           1           1      243   
+[2m[36m(f pid=83070)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=83070)[0m      299       2693.34   0.000434619        77.326      0.8463      0.8463      367   
+[2m[36m(f pid=83070)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=83070)[0m      399       2698.92    0.00656001       155.786           1           1      483   
+[2m[36m(f pid=83070)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=83070)[0m      499       2703.87    0.00477954       100.538           1           1      601   
+[2m[36m(f pid=83070)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=83070)[0m      580       2709.37   0.000251271       130.434     2.1e-06       0.001      730  LS failed, Hessian reset 
+[2m[36m(f pid=83070)[0m      599       2709.84   0.000687391       65.7725      0.2089           1      752   
+[2m[36m(f pid=83070)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=83070)[0m      651       2710.63   0.000180666       94.1979   1.331e-06       0.001      863  LS failed, Hessian reset 
+[2m[36m(f pid=83070)[0m      699       2711.52   4.31212e-05       77.1327           1           1      923   
+[2m[36m(f pid=83070)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=83070)[0m      746       2711.92   0.000531315       82.3852   8.902e-06       0.001     1053  LS failed, Hessian reset 
+[2m[36m(f pid=83070)[0m      799       2712.23   0.000541334       73.5826           1           1     1117   
+[2m[36m(f pid=83070)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=83070)[0m      883        2713.3   0.000164126        89.483   1.429e-06       0.001     1257  LS failed, Hessian reset 
+[2m[36m(f pid=83070)[0m      899       2713.79    0.00319372       81.2459           1           1     1276   
+[2m[36m(f pid=83070)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=83070)[0m      970       2714.26   1.74144e-07       68.1192      0.8505     0.08505     1371   
+[2m[36m(f pid=83070)[0m Optimization terminated normally: 
+[2m[36m(f pid=83070)[0m   Convergence detected: relative gradient magnitude is below tolerance
+[2m[36m(f pid=83070)[0m prediction BTCUSDT 52.750537323301884 [47.9300904  48.92961957 49.89452454 50.92071037 51.76686431 52.65637324
+[2m[36m(f pid=83070)[0m  53.42810327 54.12507399 54.73624498 55.23010963]
+Traceback (most recent call last):
+  File "binance_rsi.py", line 136, in <module>
+    df = pd.DataFrame(ray.get(futures)).sort_values(by=['signal'],ascending=False)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/ray/_private/client_mode_hook.py", line 105, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/ray/worker.py", line 1625, in get
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(BinanceAPIException): [36mray::f()[39m (pid=83070, ip=127.0.0.1)
+  File "binance_rsi.py", line 127, in f
+    execOrder(stock,signal)
+  File "binance_rsi.py", line 55, in execOrder
+    balance_btc = client.get_asset_balance(asset='BTC')
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 1979, in get_asset_balance
+    res = self.get_account(**params)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 1956, in get_account
+    return self._get('account', True, data=params)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 371, in _get
+    return self._request_api('get', path, signed, version, **kwargs)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 334, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 315, in _request
+    return self._handle_response(self.response)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 324, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-1021): Timestamp for this request is outside of the recvWindow.
+/Users/kahingleung/PycharmProjects/timeseries
