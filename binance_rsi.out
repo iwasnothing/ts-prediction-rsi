@@ -12240,3 +12240,7 @@ binance.exceptions.BinanceAPIException: APIError(code=-1021): Timestamp for this
 [2m[36m(f pid=29899)[0m prediction BTCUSDT 45.38437733448242 [35.82278021 35.84006051 35.87127419 36.02964229 36.04528331 36.18002173
 [2m[36m(f pid=29899)[0m  36.26967129 36.37202697 36.45402751 36.49915206]
 /Users/kahingleung/PycharmProjects/timeseries
+[main bca9e28] new signals files
+ 1 file changed, 65 insertions(+)
+To github.com:iwasnothing/ts-prediction-rsi.git
+   51cbc8e..bca9e28  main -> main
