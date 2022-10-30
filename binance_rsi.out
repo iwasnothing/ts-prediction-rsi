@@ -14820,3 +14820,59 @@ To github.com:iwasnothing/ts-prediction-rsi.git
  1 file changed, 32 insertions(+)
 To github.com:iwasnothing/ts-prediction-rsi.git
    90a14c7..dddd247  main -> main
+[2m[36m(pid=15345)[0m /Users/kahingleung/PycharmProjects/timeseries/All_Functions_Master_File.py:168: RuntimeWarning: Mean of empty slice.
+[2m[36m(pid=15345)[0m   Data[i, where] = (Data[i - lookback + 1:i + 1, close].mean())
+[2m[36m(pid=15345)[0m /Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/numpy/core/_methods.py:189: RuntimeWarning: invalid value encountered in double_scalars
+[2m[36m(pid=15345)[0m   ret = ret.dtype.type(ret / rcount)
+['BTCUSDT']
+[2m[36m(f pid=15345)[0m Initial log joint probability = -20.0973
+[2m[36m(f pid=15345)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=15345)[0m       99       2844.24      0.020516       148.747      0.8685      0.8685      115   
+[2m[36m(f pid=15345)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=15345)[0m      199       2864.58     0.0178549       194.034           1           1      232   
+[2m[36m(f pid=15345)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=15345)[0m      299       2871.63     0.0760798       200.671           1           1      348   
+[2m[36m(f pid=15345)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=15345)[0m      399        2880.6     0.0122586       148.669      0.3949           1      468   
+[2m[36m(f pid=15345)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=15345)[0m      499       2883.54    0.00295344       109.576      0.9459      0.9459      585   
+[2m[36m(f pid=15345)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=15345)[0m      574       2885.53     0.0003255       159.218   2.663e-06       0.001      715  LS failed, Hessian reset 
+[2m[36m(f pid=15345)[0m      599       2886.01   0.000227623       71.9742      0.5694      0.5694      741   
+[2m[36m(f pid=15345)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=15345)[0m      699       2887.83   0.000209398       57.6137           1           1      868   
+[2m[36m(f pid=15345)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=15345)[0m      799       2888.52    0.00236392       92.6563           1           1      984   
+[2m[36m(f pid=15345)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=15345)[0m      899       2897.58    0.00667523        412.49           1           1     1099   
+[2m[36m(f pid=15345)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=15345)[0m      999       2899.61   5.26976e-05        77.694      0.8006      0.8006     1219   
+[2m[36m(f pid=15345)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=15345)[0m     1079       2901.73   0.000192787        118.37    1.63e-06       0.001     1352  LS failed, Hessian reset 
+[2m[36m(f pid=15345)[0m     1099       2902.13   0.000434252       116.774      0.9797      0.9797     1374   
+[2m[36m(f pid=15345)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=15345)[0m     1199       2902.98   8.13308e-05       75.7331      0.7245      0.7245     1491   
+[2m[36m(f pid=15345)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=15345)[0m     1299       2904.69   0.000240473       71.9757      0.3571      0.3571     1603   
+[2m[36m(f pid=15345)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=15345)[0m     1373       2907.45   0.000164333       108.105   1.463e-06       0.001     1738  LS failed, Hessian reset 
+[2m[36m(f pid=15345)[0m     1399       2908.14     0.0011827       137.598           1           1     1768   
+[2m[36m(f pid=15345)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=15345)[0m     1499       2910.16   0.000609422       87.9877       0.406           1     1886   
+[2m[36m(f pid=15345)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=15345)[0m     1599       2911.43   1.52386e-05       74.7789      0.9967      0.9967     2009   
+[2m[36m(f pid=15345)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=15345)[0m     1641       2911.49   4.25318e-05       83.4056   5.761e-07       0.001     2100  LS failed, Hessian reset 
+[2m[36m(f pid=15345)[0m     1678        2911.5   1.56289e-06       78.1997   2.902e-08       0.001     2184  LS failed, Hessian reset 
+[2m[36m(f pid=15345)[0m     1695        2911.5   1.37869e-07       57.5382      0.2362           1     2206   
+[2m[36m(f pid=15345)[0m Optimization terminated normally: 
+[2m[36m(f pid=15345)[0m   Convergence detected: relative gradient magnitude is below tolerance
+[2m[36m(f pid=15345)[0m prediction BTCUSDT 63.183279529842004 [46.19534803 45.99358013 45.82914945 45.56331898 45.28222102 44.92389328
+[2m[36m(f pid=15345)[0m  44.50927405 44.12725262 43.61095205 43.17232771]
+[2m[36m(f pid=15345)[0m btc balance:  0.00253169
+[2m[36m(f pid=15345)[0m usdt balance:  39.21862613
+         DATE    Asset  signal  take_profit  stop_loss
+0  2022-10-30  BTCUSDT       0            0          0
+[2m[36m(f pid=15345)[0m 20807.98 0
+[2m[36m(f pid=15345)[0m [{'symbol': 'BTCUSDT', 'makerCommission': '0', 'takerCommission': '0'}]
+/Users/kahingleung/PycharmProjects/timeseries
