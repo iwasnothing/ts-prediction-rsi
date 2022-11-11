@@ -15485,3 +15485,7 @@ You have not agreed to the Xcode license agreements, please run 'sudo xcodebuild
 [2m[36m(f pid=6608)[0m [{'symbol': 'BTCUSDT', 'makerCommission': '0', 'takerCommission': '0'}]
 [2m[36m(f pid=6608)[0m exec buy order at :  17612.63 0.00568 0.0 100.0
 /Users/kahingleung/PycharmProjects/timeseries
+[main cfac80f] new signals files
+ 3 files changed, 61 insertions(+), 2 deletions(-)
+To github.com:iwasnothing/ts-prediction-rsi.git
+   aaf7bfc..cfac80f  main -> main
