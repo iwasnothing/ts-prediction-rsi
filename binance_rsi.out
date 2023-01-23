@@ -19276,3 +19276,65 @@ ray.exceptions.RayTaskError(BinanceAPIException): [36mray::f()[39m (pid=32932,
     raise BinanceAPIException(response, response.status_code, response.text)
 binance.exceptions.BinanceAPIException: APIError(code=-2015): Invalid API-key, IP, or permissions for action.
 /Users/kahingleung/PycharmProjects/timeseries
+[main d69e73e] new signals files
+ 1 file changed, 51 insertions(+)
+To github.com:iwasnothing/ts-prediction-rsi.git
+   26deaf8..d69e73e  main -> main
+[2m[36m(pid=72066)[0m /Users/kahingleung/PycharmProjects/timeseries/All_Functions_Master_File.py:168: RuntimeWarning: Mean of empty slice.
+[2m[36m(pid=72066)[0m   Data[i, where] = (Data[i - lookback + 1:i + 1, close].mean())
+[2m[36m(pid=72066)[0m /Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/numpy/core/_methods.py:189: RuntimeWarning: invalid value encountered in double_scalars
+[2m[36m(pid=72066)[0m   ret = ret.dtype.type(ret / rcount)
+['BTCUSDT']
+[2m[36m(f pid=72066)[0m Initial log joint probability = -43.4822
+[2m[36m(f pid=72066)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=72066)[0m       99       2969.13     0.0015688       186.872      0.5804      0.5804      124   
+[2m[36m(f pid=72066)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=72066)[0m      199       2987.88     0.0469311       686.528           1           1      241   
+[2m[36m(f pid=72066)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=72066)[0m      299       2993.94   0.000733644       112.562      0.3539      0.3539      379   
+[2m[36m(f pid=72066)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=72066)[0m      399       2995.41   0.000268212       71.4464       1.721      0.5896      496   
+[2m[36m(f pid=72066)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=72066)[0m      499       2998.26   0.000774151       102.397       0.484       0.484      620   
+[2m[36m(f pid=72066)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=72066)[0m      566       2999.27   0.000370039       182.506   2.983e-06       0.001      740  LS failed, Hessian reset 
+[2m[36m(f pid=72066)[0m      599        2999.8   8.99877e-05        64.271           1           1      779   
+[2m[36m(f pid=72066)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=72066)[0m      699       3000.11   0.000711198        95.567           1           1      902   
+[2m[36m(f pid=72066)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=72066)[0m      785       3002.44    0.00442663       240.134   4.435e-05       0.001     1036  LS failed, Hessian reset 
+[2m[36m(f pid=72066)[0m      799       3002.83   0.000390036       84.1161      0.5526      0.5526     1054   
+[2m[36m(f pid=72066)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=72066)[0m      899       3004.67    0.00858278        70.935       3.586      0.3586     1169   
+[2m[36m(f pid=72066)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=72066)[0m      963       3004.78   1.07756e-07       66.0284       0.439           1     1258   
+[2m[36m(f pid=72066)[0m Optimization terminated normally: 
+[2m[36m(f pid=72066)[0m   Convergence detected: relative gradient magnitude is below tolerance
+Traceback (most recent call last):
+  File "binance_rsi.py", line 136, in <module>
+    df = pd.DataFrame(ray.get(futures)).sort_values(by=['signal'],ascending=False)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/ray/_private/client_mode_hook.py", line 105, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/ray/worker.py", line 1625, in get
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(BinanceAPIException): [36mray::f()[39m (pid=72066, ip=127.0.0.1)
+  File "binance_rsi.py", line 127, in f
+    execOrder(stock,signal)
+  File "binance_rsi.py", line 55, in execOrder
+    balance_btc = client.get_asset_balance(asset='BTC')
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 1979, in get_asset_balance
+    res = self.get_account(**params)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 1956, in get_account
+    return self._get('account', True, data=params)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 371, in _get
+    return self._request_api('get', path, signed, version, **kwargs)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 334, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 315, in _request
+    return self._handle_response(self.response)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 324, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-2015): Invalid API-key, IP, or permissions for action.
+[2m[36m(f pid=72066)[0m prediction BTCUSDT 84.75473849491165 [47.22209009 46.81475551 46.41119656 46.08525587 45.86527985 45.68859546
+[2m[36m(f pid=72066)[0m  45.67493333 45.58581544 45.79732365 46.09979423]
+/Users/kahingleung/PycharmProjects/timeseries
