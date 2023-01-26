@@ -1,5 +1,5 @@
-asset,signal,DATE,Asset,take_profit,stop_loss
-VGT,0,,,,
-,0,2023-01-25,AAPL,0.0,0.0
-,0,2023-01-25,AMZN,0.0,0.0
-,0,2023-01-25,TSLA,0.0,0.0
+DATE,Asset,signal,take_profit,stop_loss
+2023-01-26,VGT,0,0,0
+2023-01-26,AAPL,0,0,0
+2023-01-26,AMZN,0,0,0
+2023-01-26,TSLA,0,0,0
