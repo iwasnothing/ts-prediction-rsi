@@ -19819,3 +19819,7 @@ binance.exceptions.BinanceAPIException: APIError(code=-2015): Invalid API-key, I
 [2m[36m(f pid=23352)[0m prediction BTCUSDT 70.59778373632922 [55.17995543 55.33135674 55.57723326 55.82854494 56.21888315 56.52957545
 [2m[36m(f pid=23352)[0m  56.99163386 57.35648249 57.8791305  58.46643512]
 /Users/kahingleung/PycharmProjects/timeseries
+[main 51bfedb] new signals files
+ 1 file changed, 48 insertions(+)
+To github.com:iwasnothing/ts-prediction-rsi.git
+   0193168..51bfedb  main -> main
