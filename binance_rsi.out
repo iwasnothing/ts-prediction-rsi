@@ -20457,3 +20457,10 @@ binance.exceptions.BinanceAPIException: APIError(code=-2015): Invalid API-key, I
 [2m[36m(f pid=16418)[0m prediction BTCUSDT 47.5199017434267 [65.31553268 65.57534631 65.72227199 65.8080808  65.8422545  65.73578953
 [2m[36m(f pid=16418)[0m  65.9326512  65.26702976 64.92065527 64.43010122]
 /Users/kahingleung/PycharmProjects/timeseries
+[main 512487b] new signals files
+ 1 file changed, 45 insertions(+)
+ssh: connect to host github.com port 22: Undefined error: 0
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
