@@ -23617,3 +23617,68 @@ ray.exceptions.RayTaskError(BinanceAPIException): [36mray::f()[39m (pid=36947,
     raise BinanceAPIException(response, response.status_code, response.text)
 binance.exceptions.BinanceAPIException: APIError(code=-2015): Invalid API-key, IP, or permissions for action.
 /Users/kahingleung/PycharmProjects/timeseries
+[main 86ac40a] new signals files
+ 1 file changed, 53 insertions(+)
+remote: Resolving deltas:   0% (0/2)        remote: Resolving deltas:  50% (1/2)        remote: Resolving deltas: 100% (2/2)        remote: Resolving deltas: 100% (2/2), completed with 2 local objects.        
+To github.com:iwasnothing/ts-prediction-rsi.git
+   02fb9fc..86ac40a  main -> main
+[2m[36m(pid=76272)[0m /Users/kahingleung/PycharmProjects/timeseries/All_Functions_Master_File.py:168: RuntimeWarning: Mean of empty slice.
+[2m[36m(pid=76272)[0m   Data[i, where] = (Data[i - lookback + 1:i + 1, close].mean())
+[2m[36m(pid=76272)[0m /Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/numpy/core/_methods.py:189: RuntimeWarning: invalid value encountered in double_scalars
+[2m[36m(pid=76272)[0m   ret = ret.dtype.type(ret / rcount)
+['BTCUSDT']
+[2m[36m(f pid=76272)[0m Initial log joint probability = -24.2021
+[2m[36m(f pid=76272)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=76272)[0m       99       3112.99     0.0157487       715.525      0.5049           1      112   
+[2m[36m(f pid=76272)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=76272)[0m      199        3135.9     0.0362334       117.739           1           1      219   
+[2m[36m(f pid=76272)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=76272)[0m      299       3145.15   0.000274253        76.719           1           1      334   
+[2m[36m(f pid=76272)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=76272)[0m      368       3146.86   0.000195155       107.603   2.329e-06       0.001      457  LS failed, Hessian reset 
+[2m[36m(f pid=76272)[0m      399       3146.93   0.000833209       90.0617           1           1      502   
+[2m[36m(f pid=76272)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=76272)[0m      434       3148.87   0.000538833       266.783   2.132e-06       0.001      584  LS failed, Hessian reset 
+[2m[36m(f pid=76272)[0m      499       3151.15   4.50541e-06       67.4475           1           1      677   
+[2m[36m(f pid=76272)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=76272)[0m      599       3151.97   1.79932e-05       75.2006           1           1      808   
+[2m[36m(f pid=76272)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=76272)[0m      699       3152.84    0.00118544        101.31      0.9263      0.9263      938   
+[2m[36m(f pid=76272)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=76272)[0m      773       3154.42    0.00023045       131.988   1.958e-06       0.001     1061  LS failed, Hessian reset 
+[2m[36m(f pid=76272)[0m      799       3154.74   0.000762998       111.022      0.7869      0.7869     1090   
+[2m[36m(f pid=76272)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=76272)[0m      882       3155.15   9.39547e-05       73.7452   1.206e-06       0.001     1230  LS failed, Hessian reset 
+[2m[36m(f pid=76272)[0m      899       3155.16   4.82689e-06       64.8548      0.3234      0.3234     1252   
+[2m[36m(f pid=76272)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=76272)[0m      926       3155.16     2.827e-07       75.1243      0.9746      0.9746     1287   
+[2m[36m(f pid=76272)[0m Optimization terminated normally: 
+[2m[36m(f pid=76272)[0m   Convergence detected: relative gradient magnitude is below tolerance
+[2m[36m(f pid=76272)[0m prediction BTCUSDT 61.06935063255232 [64.03335195 63.77957008 63.41118365 63.00167529 62.5630284  62.04612766
+[2m[36m(f pid=76272)[0m  61.60278754 60.98033153 60.46679535 59.91070998]
+Traceback (most recent call last):
+  File "binance_rsi.py", line 136, in <module>
+    df = pd.DataFrame(ray.get(futures)).sort_values(by=['signal'],ascending=False)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/ray/_private/client_mode_hook.py", line 105, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/ray/worker.py", line 1625, in get
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(BinanceAPIException): [36mray::f()[39m (pid=76272, ip=127.0.0.1)
+  File "binance_rsi.py", line 127, in f
+    execOrder(stock,signal)
+  File "binance_rsi.py", line 55, in execOrder
+    balance_btc = client.get_asset_balance(asset='BTC')
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 1979, in get_asset_balance
+    res = self.get_account(**params)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 1956, in get_account
+    return self._get('account', True, data=params)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 371, in _get
+    return self._request_api('get', path, signed, version, **kwargs)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 334, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 315, in _request
+    return self._handle_response(self.response)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 324, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-2015): Invalid API-key, IP, or permissions for action.
+/Users/kahingleung/PycharmProjects/timeseries
