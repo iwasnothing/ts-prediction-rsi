@@ -25529,3 +25529,8 @@ During handling of the above exception, another exception occurred:
     raise ConnectTimeout(e, request=request)
 requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.binance.com', port=443): Max retries exceeded with url: /api/v3/ping (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7fe5e97891c0>, 'Connection to api.binance.com timed out. (connect timeout=10)'))
 /Users/kahingleung/PycharmProjects/timeseries
+[main 0771cd5] new signals files
+ 1 file changed, 68 insertions(+)
+remote: Resolving deltas:   0% (0/2)        remote: Resolving deltas:  50% (1/2)        remote: Resolving deltas: 100% (2/2)        remote: Resolving deltas: 100% (2/2), completed with 2 local objects.        
+To github.com:iwasnothing/ts-prediction-rsi.git
+   815ffc0..0771cd5  main -> main
