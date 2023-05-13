@@ -25592,3 +25592,62 @@ binance.exceptions.BinanceAPIException: APIError(code=-2015): Invalid API-key, I
 remote: Resolving deltas:   0% (0/2)        remote: Resolving deltas:  50% (1/2)        remote: Resolving deltas: 100% (2/2)        remote: Resolving deltas: 100% (2/2), completed with 2 local objects.        
 To github.com:iwasnothing/ts-prediction-rsi.git
    75ca936..83add64  main -> main
+[2m[36m(pid=91445)[0m /Users/kahingleung/PycharmProjects/timeseries/All_Functions_Master_File.py:168: RuntimeWarning: Mean of empty slice.
+[2m[36m(pid=91445)[0m   Data[i, where] = (Data[i - lookback + 1:i + 1, close].mean())
+[2m[36m(pid=91445)[0m /Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/numpy/core/_methods.py:189: RuntimeWarning: invalid value encountered in double_scalars
+[2m[36m(pid=91445)[0m   ret = ret.dtype.type(ret / rcount)
+['BTCUSDT']
+[2m[36m(f pid=91445)[0m Initial log joint probability = -21.9164
+[2m[36m(f pid=91445)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=91445)[0m       99       3191.14    0.00789499       125.261       2.581      0.2581      117   
+[2m[36m(f pid=91445)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=91445)[0m      199       3212.26    0.00321135       111.858           1           1      232   
+[2m[36m(f pid=91445)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=91445)[0m      288       3223.34   0.000240829       118.647   1.025e-06       0.001      373  LS failed, Hessian reset 
+[2m[36m(f pid=91445)[0m      299       3223.77   0.000698108       80.0639           1           1      386   
+[2m[36m(f pid=91445)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=91445)[0m      349       3224.55    0.00050098       109.299   6.521e-06       0.001      477  LS failed, Hessian reset 
+[2m[36m(f pid=91445)[0m      399        3225.1   0.000958271       90.9309           1           1      535   
+[2m[36m(f pid=91445)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=91445)[0m      499        3227.1    0.00134109       64.6871       1.329      0.1329      653   
+[2m[36m(f pid=91445)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=91445)[0m      599        3227.9   0.000609399       73.5384           1           1      764   
+[2m[36m(f pid=91445)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=91445)[0m      636       3229.13   0.000229175       142.257   1.374e-06       0.001      852  LS failed, Hessian reset 
+[2m[36m(f pid=91445)[0m      699        3231.2    0.00237363       76.3971           1           1      939   
+[2m[36m(f pid=91445)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=91445)[0m      799       3231.33     0.0007642       75.0847           1           1     1060   
+[2m[36m(f pid=91445)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=91445)[0m      831       3231.34    2.1078e-06       74.7599   3.159e-08       0.001     1140  LS failed, Hessian reset 
+[2m[36m(f pid=91445)[0m      844       3231.34   8.16523e-08       65.2614      0.4183      0.4183     1155   
+[2m[36m(f pid=91445)[0m Optimization terminated normally: 
+[2m[36m(f pid=91445)[0m   Convergence detected: relative gradient magnitude is below tolerance
+[2m[36m(f pid=91445)[0m prediction BTCUSDT 37.3549041455852 [53.67452726 53.62842852 53.42271432 53.35666142 53.26407381 53.21330479
+[2m[36m(f pid=91445)[0m  53.19562745 53.19044623 53.2933011  53.25456808]
+[2m[36m(f pid=91445)[0m 30466.93 4299.3916 26776.96
+Traceback (most recent call last):
+  File "binance_rsi.py", line 136, in <module>
+    df = pd.DataFrame(ray.get(futures)).sort_values(by=['signal'],ascending=False)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/ray/_private/client_mode_hook.py", line 105, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/ray/worker.py", line 1625, in get
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(BinanceAPIException): [36mray::f()[39m (pid=91445, ip=127.0.0.1)
+  File "binance_rsi.py", line 127, in f
+    execOrder(stock,signal)
+  File "binance_rsi.py", line 55, in execOrder
+    balance_btc = client.get_asset_balance(asset='BTC')
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 1979, in get_asset_balance
+    res = self.get_account(**params)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 1956, in get_account
+    return self._get('account', True, data=params)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 371, in _get
+    return self._request_api('get', path, signed, version, **kwargs)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 334, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 315, in _request
+    return self._handle_response(self.response)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 324, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-2015): Invalid API-key, IP, or permissions for action.
+/Users/kahingleung/PycharmProjects/timeseries
