@@ -28602,3 +28602,60 @@ binance.exceptions.BinanceAPIException: APIError(code=-2015): Invalid API-key, I
  1 file changed, 52 insertions(+)
 To github.com:iwasnothing/ts-prediction-rsi.git
    b168ea4..fdd41c4  main -> main
+[2m[36m(pid=83360)[0m /Users/kahingleung/PycharmProjects/timeseries/All_Functions_Master_File.py:168: RuntimeWarning: Mean of empty slice.
+[2m[36m(pid=83360)[0m   Data[i, where] = (Data[i - lookback + 1:i + 1, close].mean())
+[2m[36m(pid=83360)[0m /Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/numpy/core/_methods.py:189: RuntimeWarning: invalid value encountered in double_scalars
+[2m[36m(pid=83360)[0m   ret = ret.dtype.type(ret / rcount)
+['BTCUSDT']
+[2m[36m(f pid=83360)[0m Initial log joint probability = -22.6662
+[2m[36m(f pid=83360)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=83360)[0m       99       3292.16     0.0146694        461.83      0.1651           1      117   
+[2m[36m(f pid=83360)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=83360)[0m      199       3307.12   0.000270744       67.5838           1           1      238   
+[2m[36m(f pid=83360)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=83360)[0m      244       3311.66    0.00139604       115.245   1.154e-05       0.001      326  LS failed, Hessian reset 
+[2m[36m(f pid=83360)[0m      299        3317.6   0.000927433       87.2109      0.6159      0.6159      390   
+[2m[36m(f pid=83360)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=83360)[0m      392       3320.82    0.00169806       148.905   1.528e-05       0.001      540  LS failed, Hessian reset 
+[2m[36m(f pid=83360)[0m      399       3321.59    0.00123331       109.471      0.1571           1      551   
+[2m[36m(f pid=83360)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=83360)[0m      499       3323.27     0.0296595       118.319           1           1      670   
+[2m[36m(f pid=83360)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=83360)[0m      563       3326.07   0.000152078       96.3712   1.392e-06       0.001      846  LS failed, Hessian reset 
+[2m[36m(f pid=83360)[0m      599       3328.96    0.00936657       173.849           1           1      886   
+[2m[36m(f pid=83360)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=83360)[0m      697       3331.25   0.000194732       120.998   1.382e-06       0.001     1050  LS failed, Hessian reset 
+[2m[36m(f pid=83360)[0m      699       3331.31    0.00168438        104.07           1           1     1052   
+[2m[36m(f pid=83360)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=83360)[0m      744        3331.4   2.91918e-05       76.2703   3.224e-07       0.001     1147  LS failed, Hessian reset 
+[2m[36m(f pid=83360)[0m      770        3331.4   2.47696e-07       62.3477           1           1     1183   
+[2m[36m(f pid=83360)[0m Optimization terminated normally: 
+[2m[36m(f pid=83360)[0m   Convergence detected: relative gradient magnitude is below tolerance
+Traceback (most recent call last):
+  File "binance_rsi.py", line 136, in <module>
+    df = pd.DataFrame(ray.get(futures)).sort_values(by=['signal'],ascending=False)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/ray/_private/client_mode_hook.py", line 105, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/ray/worker.py", line 1625, in get
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(BinanceAPIException): [36mray::f()[39m (pid=83360, ip=127.0.0.1)
+  File "binance_rsi.py", line 127, in f
+    execOrder(stock,signal)
+  File "binance_rsi.py", line 55, in execOrder
+    balance_btc = client.get_asset_balance(asset='BTC')
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 1979, in get_asset_balance
+    res = self.get_account(**params)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 1956, in get_account
+    return self._get('account', True, data=params)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 371, in _get
+    return self._request_api('get', path, signed, version, **kwargs)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 334, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 315, in _request
+    return self._handle_response(self.response)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 324, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-2015): Invalid API-key, IP, or permissions for action.
+[2m[36m(f pid=83360)[0m prediction BTCUSDT 66.2227519848557 [47.79728591 47.46736824 46.38880922 46.67615438 46.39682373 46.21311987
+[2m[36m(f pid=83360)[0m  46.11282863 46.03051695 46.19068868 46.23967354]
+/Users/kahingleung/PycharmProjects/timeseries
