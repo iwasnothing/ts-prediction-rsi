@@ -30017,3 +30017,7 @@ ray.exceptions.RayTaskError(BinanceAPIException): [36mray::f()[39m (pid=54501,
     raise BinanceAPIException(response, response.status_code, response.text)
 binance.exceptions.BinanceAPIException: APIError(code=-2015): Invalid API-key, IP, or permissions for action.
 /Users/kahingleung/PycharmProjects/timeseries
+[main 2afbd7e] new signals files
+ 1 file changed, 51 insertions(+)
+To github.com:iwasnothing/ts-prediction-rsi.git
+   12cf3d2..2afbd7e  main -> main
