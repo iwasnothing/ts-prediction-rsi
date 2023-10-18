@@ -34950,3 +34950,69 @@ binance.exceptions.BinanceAPIException: APIError(code=-2015): Invalid API-key, I
 You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
 You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
 You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2m[36m(pid=29300)[0m /Users/kahingleung/PycharmProjects/timeseries/All_Functions_Master_File.py:168: RuntimeWarning: Mean of empty slice.
+[2m[36m(pid=29300)[0m   Data[i, where] = (Data[i - lookback + 1:i + 1, close].mean())
+[2m[36m(pid=29300)[0m /Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/numpy/core/_methods.py:189: RuntimeWarning: invalid value encountered in double_scalars
+[2m[36m(pid=29300)[0m   ret = ret.dtype.type(ret / rcount)
+['BTCUSDT']
+[2m[36m(f pid=29300)[0m Initial log joint probability = -22.9629
+[2m[36m(f pid=29300)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=29300)[0m       99       3401.97    0.00724222       257.411       0.151           1      114   
+[2m[36m(f pid=29300)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=29300)[0m      199       3414.56    0.00316848       77.5791      0.2317           1      236   
+[2m[36m(f pid=29300)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=29300)[0m      225       3417.02   0.000550735        292.69    1.36e-06       0.001      300  LS failed, Hessian reset 
+[2m[36m(f pid=29300)[0m      291       3420.71   0.000266688       131.593   4.212e-06       0.001      414  LS failed, Hessian reset 
+[2m[36m(f pid=29300)[0m      299       3420.76   6.64737e-05       72.1281      0.4938      0.4938      422   
+[2m[36m(f pid=29300)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=29300)[0m      399       3422.97    0.00383806        105.34      0.1047           1      538   
+[2m[36m(f pid=29300)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=29300)[0m      400       3422.98   0.000171106       101.853   1.624e-06       0.001      582  LS failed, Hessian reset 
+[2m[36m(f pid=29300)[0m      499        3424.2    0.00161965        101.07           1           1      701   
+[2m[36m(f pid=29300)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=29300)[0m      592       3425.03   0.000171946       93.0662   1.087e-06       0.001      855  LS failed, Hessian reset 
+[2m[36m(f pid=29300)[0m      599       3425.36    0.00133828       121.368      0.7565      0.7565      862   
+[2m[36m(f pid=29300)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=29300)[0m      699       3425.86    0.00172261       93.1123      0.5964      0.5964      994   
+[2m[36m(f pid=29300)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=29300)[0m      799       3426.33   0.000579604       84.4137      0.1563           1     1106   
+[2m[36m(f pid=29300)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=29300)[0m      899       3428.61      0.014083       191.973           1           1     1217   
+[2m[36m(f pid=29300)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=29300)[0m      928       3429.78    0.00198914       73.7757   2.294e-05       0.001     1319  LS failed, Hessian reset 
+[2m[36m(f pid=29300)[0m      999       3430.25   9.74527e-05       62.9905           1           1     1410   
+[2m[36m(f pid=29300)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=29300)[0m     1091        3430.5   4.58517e-07        78.611      0.2753           1     1524   
+[2m[36m(f pid=29300)[0m Optimization terminated normally: 
+[2m[36m(f pid=29300)[0m   Convergence detected: relative gradient magnitude is below tolerance
+[2m[36m(f pid=29300)[0m prediction BTCUSDT 63.83790393278131 [53.78314515 54.01498002 54.22899954 54.46014732 54.82571898 54.93254879
+[2m[36m(f pid=29300)[0m  55.20382363 55.40096093 55.62632757 55.77781324]
+Traceback (most recent call last):
+  File "binance_rsi.py", line 136, in <module>
+    df = pd.DataFrame(ray.get(futures)).sort_values(by=['signal'],ascending=False)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/ray/_private/client_mode_hook.py", line 105, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/ray/worker.py", line 1625, in get
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(BinanceAPIException): [36mray::f()[39m (pid=29300, ip=127.0.0.1)
+  File "binance_rsi.py", line 127, in f
+    execOrder(stock,signal)
+  File "binance_rsi.py", line 55, in execOrder
+    balance_btc = client.get_asset_balance(asset='BTC')
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 1979, in get_asset_balance
+    res = self.get_account(**params)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 1956, in get_account
+    return self._get('account', True, data=params)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 371, in _get
+    return self._request_api('get', path, signed, version, **kwargs)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 334, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 315, in _request
+    return self._handle_response(self.response)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 324, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-2015): Invalid API-key, IP, or permissions for action.
+/Users/kahingleung/PycharmProjects/timeseries
+You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
