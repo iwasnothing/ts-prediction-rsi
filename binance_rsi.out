@@ -43235,3 +43235,61 @@ binance.exceptions.BinanceAPIException: APIError(code=-2015): Invalid API-key, I
 You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
 You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
 You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+[2m[36m(pid=83794)[0m /Users/kahingleung/PycharmProjects/timeseries/All_Functions_Master_File.py:168: RuntimeWarning: Mean of empty slice.
+[2m[36m(pid=83794)[0m   Data[i, where] = (Data[i - lookback + 1:i + 1, close].mean())
+[2m[36m(pid=83794)[0m /Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/numpy/core/_methods.py:189: RuntimeWarning: invalid value encountered in double_scalars
+[2m[36m(pid=83794)[0m   ret = ret.dtype.type(ret / rcount)
+['BTCUSDT']
+[2m[36m(f pid=83794)[0m Initial log joint probability = -49.6243
+[2m[36m(f pid=83794)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=83794)[0m       99       3569.12    0.00313411       249.559      0.4287      0.4287      114   
+[2m[36m(f pid=83794)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=83794)[0m      149       3578.06   0.000275254       126.809   1.064e-06       0.001      206  LS failed, Hessian reset 
+[2m[36m(f pid=83794)[0m      199        3582.6   0.000299105       73.2706      0.3624           1      274   
+[2m[36m(f pid=83794)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=83794)[0m      218       3582.98   0.000159306       108.761   1.386e-06       0.001      344  LS failed, Hessian reset 
+[2m[36m(f pid=83794)[0m      275        3585.3   0.000450071        227.98   2.635e-06       0.001      448  LS failed, Hessian reset 
+[2m[36m(f pid=83794)[0m      299       3586.99   0.000743448       66.5039           1           1      476   
+[2m[36m(f pid=83794)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=83794)[0m      399       3589.68    0.00360504       128.576           1           1      603   
+[2m[36m(f pid=83794)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=83794)[0m      421       3591.01    0.00108189       177.356   1.546e-05       0.001      669  LS failed, Hessian reset 
+[2m[36m(f pid=83794)[0m      499        3592.4   0.000179097       84.0362           1           1      768   
+[2m[36m(f pid=83794)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=83794)[0m      550       3592.59   0.000377923       103.287   4.539e-06       0.001      866  LS failed, Hessian reset 
+[2m[36m(f pid=83794)[0m      599       3592.62   8.79611e-07       90.1578           1           1      930   
+[2m[36m(f pid=83794)[0m     Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+[2m[36m(f pid=83794)[0m      686       3592.69   1.42355e-07       72.4523      0.1951           1     1045   
+[2m[36m(f pid=83794)[0m Optimization terminated normally: 
+[2m[36m(f pid=83794)[0m   Convergence detected: relative gradient magnitude is below tolerance
+[2m[36m(f pid=83794)[0m prediction BTCUSDT 66.25884311384677 [60.76670337 61.20786192 61.59761979 62.20310144 62.83320388 63.59198977
+[2m[36m(f pid=83794)[0m  64.35713146 65.11550807 66.03018168 66.81036062]
+Traceback (most recent call last):
+  File "binance_rsi.py", line 136, in <module>
+    df = pd.DataFrame(ray.get(futures)).sort_values(by=['signal'],ascending=False)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/ray/_private/client_mode_hook.py", line 105, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/ray/worker.py", line 1625, in get
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(BinanceAPIException): [36mray::f()[39m (pid=83794, ip=127.0.0.1)
+  File "binance_rsi.py", line 127, in f
+    execOrder(stock,signal)
+  File "binance_rsi.py", line 55, in execOrder
+    balance_btc = client.get_asset_balance(asset='BTC')
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 1979, in get_asset_balance
+    res = self.get_account(**params)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 1956, in get_account
+    return self._get('account', True, data=params)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 371, in _get
+    return self._request_api('get', path, signed, version, **kwargs)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 334, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 315, in _request
+    return self._handle_response(self.response)
+  File "/Users/kahingleung/PycharmProjects/timeseries/venv/lib/python3.8/site-packages/binance/client.py", line 324, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-2015): Invalid API-key, IP, or permissions for action.
+/Users/kahingleung/PycharmProjects/timeseries
+You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
+You have not agreed to the Xcode license agreements. Please run 'sudo xcodebuild -license' from within a Terminal window to review and agree to the Xcode and Apple SDKs license.
